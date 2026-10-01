@@ -1,0 +1,13 @@
+{
+  "name": "afrigov-usecases",
+  "private": true,
+  "type": "module",
+  "description": "Real government websites rebuilt on afrigov. This package only holds the script that audits them and builds the index.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "build:offline": "node scripts/build.mjs --offline"
+  },
+  "dependencies": {
+    "afrigov-audit": "^0.2.0"
+  }
+}

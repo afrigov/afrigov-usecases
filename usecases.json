@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "fmcide",
+    "name": "Federal Ministry of Communications, Innovation and Digital Economy",
+    "country": "Nigeria",
+    "site": "fmcide.gov.ng",
+    "note": "including the 3MTT application journey",
+    "compare": [
+      { "label": "Home", "real": "https://fmcide.gov.ng/", "rebuild": "fmcide/index.html" },
+      { "label": "Initiatives", "real": "https://fmcide.gov.ng/initiatives/", "rebuild": "fmcide/initiatives.html" },
+      { "label": "News", "real": "https://fmcide.gov.ng/news/", "rebuild": "fmcide/news.html" }
+    ]
+  }
+]

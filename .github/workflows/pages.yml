@@ -1,9 +1,13 @@
 name: Pages
 
-# Publishes the whole repository as a static site: the index at the root and one folder per use case.
+# Audits the rebuilds and the real sites, writes the badges, scores and index, and publishes
+# the repository as a static site: the index at the root and one folder per use case.
+# Runs on every push, every Monday, and on demand, so the scores are never typed by hand.
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "0 5 * * 1"
   workflow_dispatch:
 
 permissions:
@@ -13,7 +17,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -23,10 +27,20 @@ jobs:
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
       - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - name: Audit and build the index
+        run: node scripts/build.mjs
+      - name: Collect the site
+        run: rsync -a --exclude node_modules --exclude .git --exclude _site ./ _site/
       - uses: actions/configure-pages@v5
       # v3 and v4 are a pair; the v5 artifact action fails to hand over to deploy-pages.
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: .
+          path: _site
       - id: deploy
         uses: actions/deploy-pages@v4

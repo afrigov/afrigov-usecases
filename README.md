@@ -4,9 +4,11 @@ Real government websites rebuilt page for page on [afrigov](https://github.com/o
 
 Live: https://omoyolab.github.io/afrigov-usecases/
 
-| Use case | Real site | Folder | Pages | Real home page | Rebuild |
-| --- | --- | --- | ---: | ---: | ---: |
-| Federal Ministry of Communications, Innovation and Digital Economy, Nigeria | fmcide.gov.ng | [`fmcide/`](fmcide/) | 29 | 52, D | 100, A |
+| Use case | Rebuild | Real site, home page |
+| --- | --- | --- |
+| [fmcide.gov.ng](fmcide/), Nigeria | ![Rebuild score](https://omoyolab.github.io/afrigov-usecases/badges/fmcide-rebuild.svg) | ![Real site score](https://omoyolab.github.io/afrigov-usecases/badges/fmcide-real.svg) |
+
+The badges are written by [afrigov-audit](https://github.com/omoyolab/afrigov-audit), not by hand. See [How the scores stay current](#how-the-scores-stay-current).
 
 ## What these are, and are not
 
@@ -26,6 +28,17 @@ If you speak for one of these organisations and want something changed or remove
 
 Each folder has its own README with the page map and its own findings.
 
+## How the scores stay current
+
+`scripts/build.mjs` audits every rebuilt page and the real pages they are compared with, then writes `scores.json`, a badge per use case in `badges/`, and `index.html`. The Pages workflow runs it on every push, every Monday, and on demand, so the live index and the badges always show the last audit. A rebuild's badge is its lowest-scoring page. If a real site will not load, its last score is kept with the date it was taken.
+
+```sh
+npm install
+npx playwright install chromium
+npm run build            # audit, then write the index, scores and badges
+npm run build:offline    # rebuild the index from scores.json without auditing
+```
+
 ## Adding a use case
 
-Add a folder, add a row to the table above and a card on `index.html`. Pages publishes the whole repository on every push to `main`.
+Add a folder with the rebuilt pages and an entry in `usecases.json` naming the real pages to compare. The build does the rest: the card, the badges and the scores table. Add the badge row to this README.

@@ -1,0 +1,59 @@
+{
+  "checkedAt": "2026-10-01",
+  "tool": "afrigov-audit 0.2.0",
+  "usecases": {
+    "fmcide": {
+      "pages": 29,
+      "rebuild": {
+        "score": 100,
+        "grade": "A"
+      },
+      "real": {
+        "score": 52,
+        "grade": "D",
+        "checkedAt": "2026-10-01"
+      },
+      "compare": [
+        {
+          "label": "Home",
+          "url": "https://fmcide.gov.ng/",
+          "real": {
+            "score": 52,
+            "grade": "D",
+            "checkedAt": "2026-10-01"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "Initiatives",
+          "url": "https://fmcide.gov.ng/initiatives/",
+          "real": {
+            "score": 73,
+            "grade": "C",
+            "checkedAt": "2026-10-01"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "News",
+          "url": "https://fmcide.gov.ng/news/",
+          "real": {
+            "score": 58,
+            "grade": "D",
+            "checkedAt": "2026-10-01"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        }
+      ]
+    }
+  }
+}
