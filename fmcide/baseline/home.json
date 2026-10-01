@@ -1,0 +1,410 @@
+{
+  "url": "https://fmcide.gov.ng/",
+  "finalUrl": "https://fmcide.gov.ng/",
+  "checkedAt": "2026-10-01T06:35:59.647Z",
+  "tool": {
+    "name": "afrigov-audit",
+    "version": "0.1.1",
+    "axeVersion": "4.13.0"
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "name": "phone",
+        "width": 375,
+        "height": 800
+      },
+      "facts": {
+        "title": "Home | The Federal Ministry of Communications, Innovation and Digital Economy",
+        "lang": "en-US",
+        "hasSkipLink": true,
+        "viewportMeta": "width=device-width, initial-scale=1",
+        "allowsZoom": true,
+        "smallTargets": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "targetsUnder44": 11,
+        "interactiveCount": 29,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "wcag": [
+            "1.4.3"
+          ],
+          "nodes": 3,
+          "examples": [
+            ".elementor-element-e1400b9 > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-md.elementor-button.elementor-button-link > .elementor-button-content-wrapper > .elementor-button-text",
+            ".elementor-element-4cb807a > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-md.elementor-button.elementor-button-link > .elementor-button-content-wrapper > .elementor-button-text",
+            ".elementor-size-md.elementor-button[href$=\"news/\"] > .elementor-button-content-wrapper > .elementor-button-text"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Colour",
+            "url": "https://omoyolab.github.io/afrigov/styles/colour.html",
+            "advice": "Use the pack's derived primary and the status tokens; every pair passes 4.5:1."
+          }
+        },
+        {
+          "id": "image-alt",
+          "impact": "critical",
+          "help": "Images must have alternative text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
+          "wcag": [
+            "1.1.1"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".e-page-transition--preloader"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Header",
+            "url": "https://omoyolab.github.io/afrigov/components/header.html",
+            "advice": "Decorative images get alt=\"\"; informative ones describe the content."
+          }
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+          "wcag": [
+            "2.4.4",
+            "4.1.2"
+          ],
+          "nodes": 9,
+          "examples": [
+            ".elementor-element-f1ba8a6.elementor-sticky--active.elementor-section--handles-inside > .elementor-element-c2ff171.e-child[data-id=\"c2ff171\"] > .elementor-element-69ea2eb.elementor-widget-image[data-id=\"69ea2eb\"] > .elementor-widget-container > a[href$=\"fmcide.gov.ng/\"]",
+            ".elementor-element-f1ba8a6.elementor-sticky--active.elementor-section--handles-inside > .elementor-element-18e0627.e-child[data-id=\"18e0627\"] > .elementor-element-aeb8941.elementor-align-right[data-id=\"aeb8941\"] > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-lg.elementor-button.elementor-button-link",
+            "a[href$=\"nitda.gov.ng/\"]",
+            "a[href$=\"ndpc.gov.ng/\"]",
+            "a[href$=\"galaxybackbone.com.ng/\"]"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "Links and buttons need text that says where they go or what they do."
+          }
+        },
+        {
+          "id": "ag-small-targets",
+          "impact": "serious",
+          "help": "Links or controls smaller than 24px at phone width",
+          "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 7,
+          "examples": [
+            "a",
+            "a",
+            "a",
+            "a",
+            "a"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Make links and controls at least 48px tall at phone width."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-command-name",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-required-children",
+        "aria-required-parent",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "frame-title-unique",
+        "frame-title",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ],
+      "ms": 16350
+    },
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "facts": {
+        "title": "Home | The Federal Ministry of Communications, Innovation and Digital Economy",
+        "lang": "en-US",
+        "hasSkipLink": true,
+        "viewportMeta": "width=device-width, initial-scale=1",
+        "allowsZoom": true,
+        "smallTargets": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "targetsUnder44": 16,
+        "interactiveCount": 46,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "wcag": [
+            "1.4.3"
+          ],
+          "nodes": 4,
+          "examples": [
+            "ul[data-smartmenus-id=\"17908365580575332\"] > .menu-item-home.current-menu-item.page_item > .elementor-item-active[aria-current=\"page\"][href$=\"fmcide.gov.ng/\"]",
+            ".elementor-element-e1400b9 > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-md.elementor-button.elementor-button-link > .elementor-button-content-wrapper > .elementor-button-text",
+            ".elementor-element-4cb807a > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-md.elementor-button.elementor-button-link > .elementor-button-content-wrapper > .elementor-button-text",
+            ".elementor-size-md.elementor-button[href$=\"news/\"] > .elementor-button-content-wrapper > .elementor-button-text"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Colour",
+            "url": "https://omoyolab.github.io/afrigov/styles/colour.html",
+            "advice": "Use the pack's derived primary and the status tokens; every pair passes 4.5:1."
+          }
+        },
+        {
+          "id": "image-alt",
+          "impact": "critical",
+          "help": "Images must have alternative text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
+          "wcag": [
+            "1.1.1"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".e-page-transition--preloader"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Header",
+            "url": "https://omoyolab.github.io/afrigov/components/header.html",
+            "advice": "Decorative images get alt=\"\"; informative ones describe the content."
+          }
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+          "wcag": [
+            "2.4.4",
+            "4.1.2"
+          ],
+          "nodes": 8,
+          "examples": [
+            "header:nth-child(1) > .elementor-element-9cfff2a.e-child[data-id=\"9cfff2a\"] > .elementor-element-36bf031.logo[data-id=\"36bf031\"] > .elementor-widget-container > a[href$=\"fmcide.gov.ng/\"]",
+            "a[href$=\"nitda.gov.ng/\"]",
+            "a[href$=\"ndpc.gov.ng/\"]",
+            "a[href$=\"galaxybackbone.com.ng/\"]",
+            "a[href$=\"nigcomsat.gov.ng/\"]"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "Links and buttons need text that says where they go or what they do."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-command-name",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-required-children",
+        "aria-required-parent",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "frame-title-unique",
+        "frame-title",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ],
+      "ms": 18707
+    }
+  ],
+  "findings": [
+    {
+      "id": "image-alt",
+      "impact": "critical",
+      "help": "Images must have alternative text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/image-alt?application=playwright",
+      "wcag": [
+        "1.1.1"
+      ],
+      "nodes": 1,
+      "examples": [
+        ".e-page-transition--preloader"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Header",
+        "url": "https://omoyolab.github.io/afrigov/components/header.html",
+        "advice": "Decorative images get alt=\"\"; informative ones describe the content."
+      }
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "nodes": 9,
+      "examples": [
+        ".elementor-element-f1ba8a6.elementor-sticky--active.elementor-section--handles-inside > .elementor-element-c2ff171.e-child[data-id=\"c2ff171\"] > .elementor-element-69ea2eb.elementor-widget-image[data-id=\"69ea2eb\"] > .elementor-widget-container > a[href$=\"fmcide.gov.ng/\"]",
+        ".elementor-element-f1ba8a6.elementor-sticky--active.elementor-section--handles-inside > .elementor-element-18e0627.e-child[data-id=\"18e0627\"] > .elementor-element-aeb8941.elementor-align-right[data-id=\"aeb8941\"] > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-lg.elementor-button.elementor-button-link",
+        "a[href$=\"nitda.gov.ng/\"]",
+        "a[href$=\"ndpc.gov.ng/\"]",
+        "a[href$=\"galaxybackbone.com.ng/\"]"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Button",
+        "url": "https://omoyolab.github.io/afrigov/components/button.html",
+        "advice": "Links and buttons need text that says where they go or what they do."
+      }
+    },
+    {
+      "id": "ag-small-targets",
+      "impact": "serious",
+      "help": "Links or controls smaller than 24px at phone width",
+      "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+      "wcag": [
+        "2.5.8"
+      ],
+      "nodes": 7,
+      "examples": [
+        "a",
+        "a",
+        "a",
+        "a",
+        "a"
+      ],
+      "viewports": [
+        "phone"
+      ],
+      "fix": {
+        "component": "Spacing and layout",
+        "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+        "advice": "Make links and controls at least 48px tall at phone width."
+      }
+    },
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "wcag": [
+        "1.4.3"
+      ],
+      "nodes": 4,
+      "examples": [
+        ".elementor-element-e1400b9 > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-md.elementor-button.elementor-button-link > .elementor-button-content-wrapper > .elementor-button-text",
+        ".elementor-element-4cb807a > .elementor-widget-container > .elementor-button-wrapper > .elementor-size-md.elementor-button.elementor-button-link > .elementor-button-content-wrapper > .elementor-button-text",
+        ".elementor-size-md.elementor-button[href$=\"news/\"] > .elementor-button-content-wrapper > .elementor-button-text",
+        "ul[data-smartmenus-id=\"17908365580575332\"] > .menu-item-home.current-menu-item.page_item > .elementor-item-active[aria-current=\"page\"][href$=\"fmcide.gov.ng/\"]"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Colour",
+        "url": "https://omoyolab.github.io/afrigov/styles/colour.html",
+        "advice": "Use the pack's derived primary and the status tokens; every pair passes 4.5:1."
+      }
+    }
+  ],
+  "score": 52,
+  "grade": "D",
+  "summary": {
+    "critical": 1,
+    "serious": 3,
+    "moderate": 0,
+    "minor": 0
+  }
+}
