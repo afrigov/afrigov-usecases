@@ -1,5 +1,5 @@
 // Audits every rebuilt page and the real pages they are compared with, then writes
-// scores.json, a badge per use case, and index.html. Nothing in the index is typed by hand.
+// scores.json, a badge per use case, and index.html.
 //
 //   node scripts/build.mjs            audit, then write everything
 //   node scripts/build.mjs --offline  skip the audits and rebuild the index from scores.json
@@ -192,7 +192,7 @@ function index(scores) {
         </table>
       </div>
       <div class="ag-prose">
-        <p>Last checked <time datetime="${scores.checkedAt}">${scores.checkedAt}</time> with ${esc(scores.tool ?? "afrigov-audit")}, at phone and desktop widths. The badges and this table are written by the audit, not by hand, and are checked again every week. A rebuild's badge is its lowest-scoring page. Automated checks find about a third of real accessibility problems; a score of 100 means the automated checks pass, not that the work is finished.</p>
+        <p>Last checked <time datetime="${scores.checkedAt}">${scores.checkedAt}</time> with ${esc(scores.tool ?? "afrigov-audit")}, at phone and desktop widths. The badges and this table come from the audit and update automatically every week. A rebuild's badge is its lowest-scoring page. Automated checks find about a third of real accessibility problems; a score of 100 means the automated checks pass, not that the work is finished.</p>
         <h2>What the rebuilds changed in afrigov</h2>
         <p>The first rebuild logged 17 findings. They became the back link, dated list, image and figure, download link, empty state, hero, statement, social links, band and the photo gallery pattern, released as afrigov 0.5 to 0.8. <a href="https://github.com/omoyolab/afrigov-usecases/blob/main/fmcide/FINDINGS.md">Read the findings</a>.</p>
       </div>

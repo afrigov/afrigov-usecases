@@ -2,7 +2,7 @@ name: Pages
 
 # Audits the rebuilds and the real sites, writes the badges, scores and index, and publishes
 # the repository as a static site: the index at the root and one folder per use case.
-# Runs on every push, every Monday, and on demand, so the scores are never typed by hand.
+# Runs on every push, every Monday, and on demand, so the scores stay current.
 on:
   push:
     branches: [main]

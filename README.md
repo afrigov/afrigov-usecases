@@ -8,7 +8,7 @@ Live: https://omoyolab.github.io/afrigov-usecases/
 | --- | --- | --- |
 | [fmcide.gov.ng](fmcide/), Nigeria | ![Rebuild score](https://omoyolab.github.io/afrigov-usecases/badges/fmcide-rebuild.svg) | ![Real site score](https://omoyolab.github.io/afrigov-usecases/badges/fmcide-real.svg) |
 
-The badges are written by [afrigov-audit](https://github.com/omoyolab/afrigov-audit), not by hand. See [How the scores stay current](#how-the-scores-stay-current).
+The badges come from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) and update automatically every week. See [How the scores stay current](#how-the-scores-stay-current).
 
 ## What these are, and are not
 
