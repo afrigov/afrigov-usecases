@@ -1,9 +1,21 @@
 # Generates the rebuilt pages from one shell. Run: python3 build-pages.py
-import os, html
+import os, html, re
 CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/")
 NAV = [("index.html","Home"),("about.html","About"),("initiatives.html","Initiatives"),("media.html","Media"),("ict-hubs.html","ICT Hubs"),("project-bridge.html","Project BRIDGE"),("pebec.html","PEBEC")]
 
+ORG = "Federal Ministry of Communications, Innovation and Digital Economy"
+
+def describe(title, main):
+    """One or two sentences for the description: the page's own lead paragraph, or its first paragraph."""
+    m = re.search(r'<p class="ag-lead[^"]*">(.*?)</p>', main, flags=re.S) or re.search(r"<p>(.*?)</p>", main, flags=re.S)
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", m.group(1))).strip() if m else title
+    if len(text) > 158:
+        text = text[:158].rsplit(" ", 1)[0].rstrip(",;:") + "…"
+    return text
+
 def shell(title, main, current=None, root="", extra_css="", breadcrumb=None):
+    page_title = title if title == ORG else f"{title} – {ORG}"
+    description = html.escape(describe(title, main), quote=True)
     r = root
     nav = "\n".join(f'            <li><a class="ag-nav__link" href="{r}{h}"{" aria-current=\"page\"" if label==current else ""}>{label}</a></li>' for h,label in NAV)
     crumb = ""
@@ -15,8 +27,18 @@ def shell(title, main, current=None, root="", extra_css="", breadcrumb=None):
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{html.escape(title)}</title>
+    <title>{html.escape(page_title)}</title>
+    <meta name="description" content="{description}" />
+    <!-- An unofficial rebuild stays out of search results, so it never competes with the ministry's own site. -->
     <meta name="robots" content="noindex" />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <!-- Collapses the menu on phones from the first paint, so the page does not jump when the script arrives. -->
+    <script>
+      document.documentElement.classList.add("ag-js");
+      addEventListener("load", function () {{
+        if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
+      }});
+    </script>
     <link rel="stylesheet" href="{CDN}core.min.css" />
     <link rel="stylesheet" href="{CDN}ng.min.css" />
   </head>
