@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-01",
+  "checkedAt": "2026-10-02",
   "tool": "afrigov-audit 0.2.0",
   "usecases": {
     "fmcide": {
@@ -9,18 +9,18 @@
         "grade": "A"
       },
       "real": {
-        "score": 52,
+        "score": 58,
         "grade": "D",
-        "checkedAt": "2026-10-01"
+        "checkedAt": "2026-10-02"
       },
       "compare": [
         {
           "label": "Home",
           "url": "https://fmcide.gov.ng/",
           "real": {
-            "score": 52,
+            "score": 58,
             "grade": "D",
-            "checkedAt": "2026-10-01"
+            "checkedAt": "2026-10-02"
           },
           "rebuild": {
             "score": 100,
@@ -33,7 +33,7 @@
           "real": {
             "score": 73,
             "grade": "C",
-            "checkedAt": "2026-10-01"
+            "checkedAt": "2026-10-02"
           },
           "rebuild": {
             "score": 100,
@@ -46,7 +46,60 @@
           "real": {
             "score": 58,
             "grade": "D",
-            "checkedAt": "2026-10-01"
+            "checkedAt": "2026-10-02"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        }
+      ]
+    },
+    "nia-gh": {
+      "pages": 32,
+      "rebuild": {
+        "score": 100,
+        "grade": "A"
+      },
+      "real": {
+        "score": 38.5,
+        "grade": "F",
+        "checkedAt": "2026-10-02"
+      },
+      "compare": [
+        {
+          "label": "Home",
+          "url": "https://nia.gov.gh/",
+          "real": {
+            "score": 38.5,
+            "grade": "F",
+            "checkedAt": "2026-10-02"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "Card replacement",
+          "url": "https://nia.gov.gh/service/card-replacement-service/",
+          "real": {
+            "score": 68.5,
+            "grade": "C",
+            "checkedAt": "2026-10-02"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "Fees and charges",
+          "url": "https://nia.gov.gh/fees-and-charges-2026/",
+          "real": {
+            "score": 65.5,
+            "grade": "C",
+            "checkedAt": "2026-10-02"
           },
           "rebuild": {
             "score": 100,

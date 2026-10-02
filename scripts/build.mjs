@@ -192,9 +192,10 @@ function index(scores) {
         </table>
       </div>
       <div class="ag-prose">
-        <p>Last checked <time datetime="${scores.checkedAt}">${scores.checkedAt}</time> with ${esc(scores.tool ?? "afrigov-audit")}, at phone and desktop widths. The badges and this table come from the audit and update automatically every week. A rebuild's badge is its lowest-scoring page. Automated checks find about a third of real accessibility problems; a score of 100 means the automated checks pass, not that the work is finished.</p>
+        <p>Last checked <time datetime="${scores.checkedAt}">${scores.checkedAt}</time> with ${esc(scores.tool ?? "afrigov-audit")}, at phone and desktop widths. The badges and this table come from the audit and update automatically every week. A rebuild's badge is its lowest-scoring page. Automated checks find about a third of real accessibility problems; a score of 100 means the automated checks pass. Testing with a screen reader still has to be done by a person.</p>
         <h2>What the rebuilds changed in afrigov</h2>
         <p>The first rebuild logged 17 findings. They became the back link, dated list, image and figure, download link, empty state, hero, statement, social links, band and the photo gallery pattern, released as afrigov 0.5 to 0.8. <a href="https://github.com/omoyolab/afrigov-usecases/blob/main/fmcide/FINDINGS.md">Read the findings</a>.</p>
+        <p>The second rebuild, a service agency in another country, logged 11. Eight are open issues in afrigov: steps, key figures, a contents list, buttons on coloured bands, narrow tables, finding an entry in a long list, a flush main element, and Ghana's sixteen regions. <a href="https://github.com/omoyolab/afrigov-usecases/blob/main/nia-gh/FINDINGS.md">Read the findings</a>.</p>
       </div>
     </main>
 

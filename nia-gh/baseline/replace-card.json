@@ -1,0 +1,355 @@
+{
+  "url": "https://nia.gov.gh/service/card-replacement-service/",
+  "finalUrl": "https://nia.gov.gh/service/card-replacement-service/",
+  "checkedAt": "2026-10-02T15:22:24.242Z",
+  "tool": {
+    "name": "afrigov-audit",
+    "version": "0.2.0",
+    "axeVersion": "4.13.0"
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "name": "phone",
+        "width": 375,
+        "height": 800
+      },
+      "facts": {
+        "title": "Card Replacement Service - National Identification Authority",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1",
+        "allowsZoom": true,
+        "smallTargets": [
+          "a.logo",
+          "a"
+        ],
+        "targetsUnder44": 4,
+        "interactiveCount": 7,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "wcag": [
+            "1.4.3"
+          ],
+          "nodes": 3,
+          "examples": [
+            ".left > .title",
+            ".dark_color.title_all_box.style_one > .center.title_sections > .title",
+            ".elementor-button-text"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Colour",
+            "url": "https://omoyolab.github.io/afrigov/styles/colour.html",
+            "advice": "Use the pack's derived primary and the status tokens; every pair passes 4.5:1."
+          }
+        },
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        },
+        {
+          "id": "ag-small-targets",
+          "impact": "serious",
+          "help": "Links or controls smaller than 24px at phone width",
+          "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 2,
+          "examples": [
+            "a.logo",
+            "a"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Make links and controls at least 48px tall at phone width."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "definition-list",
+        "dlitem",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ],
+      "ms": 4188
+    },
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "facts": {
+        "title": "Card Replacement Service - National Identification Authority",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1",
+        "allowsZoom": true,
+        "smallTargets": [
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a",
+          "a"
+        ],
+        "targetsUnder44": 9,
+        "interactiveCount": 14,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "wcag": [
+            "1.4.3"
+          ],
+          "nodes": 4,
+          "examples": [
+            "#menu-item-6836 > .dropdown-toggle[data-toggle=\"dropdown\"][aria-haspopup=\"true\"] > span[itemprop=\"name\"]",
+            ".left > .title",
+            ".dark_color.title_all_box.style_one > .center.title_sections > .title",
+            ".elementor-button-text"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Colour",
+            "url": "https://omoyolab.github.io/afrigov/styles/colour.html",
+            "advice": "Use the pack's derived primary and the status tokens; every pair passes 4.5:1."
+          }
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+          "wcag": [
+            "2.4.4",
+            "4.1.2"
+          ],
+          "nodes": 4,
+          "examples": [
+            "a[target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(2)",
+            "a[href$=\"officialNIAGH\"][target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(3)",
+            "a[target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(4)",
+            "a[target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(5)"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "Links and buttons need text that says where they go or what they do."
+          }
+        },
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "definition-list",
+        "dlitem",
+        "document-title",
+        "duplicate-id-aria",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ],
+      "ms": 3424
+    }
+  ],
+  "findings": [
+    {
+      "id": "color-contrast",
+      "impact": "serious",
+      "help": "Elements must meet minimum color contrast ratio thresholds",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+      "wcag": [
+        "1.4.3"
+      ],
+      "nodes": 4,
+      "examples": [
+        ".left > .title",
+        ".dark_color.title_all_box.style_one > .center.title_sections > .title",
+        ".elementor-button-text",
+        "#menu-item-6836 > .dropdown-toggle[data-toggle=\"dropdown\"][aria-haspopup=\"true\"] > span[itemprop=\"name\"]"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Colour",
+        "url": "https://omoyolab.github.io/afrigov/styles/colour.html",
+        "advice": "Use the pack's derived primary and the status tokens; every pair passes 4.5:1."
+      }
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "nodes": 4,
+      "examples": [
+        "a[target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(2)",
+        "a[href$=\"officialNIAGH\"][target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(3)",
+        "a[target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(4)",
+        "a[target=\"\\\"_blank\\\"\"][rel=\"\\\"nofollow\\\"\"]:nth-child(5)"
+      ],
+      "viewports": [
+        "desktop"
+      ],
+      "fix": {
+        "component": "Button",
+        "url": "https://omoyolab.github.io/afrigov/components/button.html",
+        "advice": "Links and buttons need text that says where they go or what they do."
+      }
+    },
+    {
+      "id": "ag-small-targets",
+      "impact": "serious",
+      "help": "Links or controls smaller than 24px at phone width",
+      "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+      "wcag": [
+        "2.5.8"
+      ],
+      "nodes": 2,
+      "examples": [
+        "a.logo",
+        "a"
+      ],
+      "viewports": [
+        "phone"
+      ],
+      "fix": {
+        "component": "Spacing and layout",
+        "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+        "advice": "Make links and controls at least 48px tall at phone width."
+      }
+    },
+    {
+      "id": "ag-no-skip-link",
+      "impact": "moderate",
+      "help": "No skip link to the main content",
+      "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+      "wcag": [
+        "2.4.1"
+      ],
+      "nodes": 1,
+      "examples": [],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Skip link",
+        "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+        "advice": "Add a skip link as the first focusable element."
+      }
+    }
+  ],
+  "score": 68.5,
+  "grade": "C",
+  "summary": {
+    "critical": 0,
+    "serious": 3,
+    "moderate": 1,
+    "minor": 0
+  }
+}

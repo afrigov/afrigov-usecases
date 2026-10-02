@@ -6,9 +6,45 @@
     "site": "fmcide.gov.ng",
     "note": "including the 3MTT application journey",
     "compare": [
-      { "label": "Home", "real": "https://fmcide.gov.ng/", "rebuild": "fmcide/index.html" },
-      { "label": "Initiatives", "real": "https://fmcide.gov.ng/initiatives/", "rebuild": "fmcide/initiatives.html" },
-      { "label": "News", "real": "https://fmcide.gov.ng/news/", "rebuild": "fmcide/news.html" }
+      {
+        "label": "Home",
+        "real": "https://fmcide.gov.ng/",
+        "rebuild": "fmcide/index.html"
+      },
+      {
+        "label": "Initiatives",
+        "real": "https://fmcide.gov.ng/initiatives/",
+        "rebuild": "fmcide/initiatives.html"
+      },
+      {
+        "label": "News",
+        "real": "https://fmcide.gov.ng/news/",
+        "rebuild": "fmcide/news.html"
+      }
+    ]
+  },
+  {
+    "slug": "nia-gh",
+    "name": "National Identification Authority",
+    "country": "Ghana",
+    "site": "nia.gov.gh",
+    "note": "including a card replacement journey",
+    "compare": [
+      {
+        "label": "Home",
+        "real": "https://nia.gov.gh/",
+        "rebuild": "nia-gh/index.html"
+      },
+      {
+        "label": "Card replacement",
+        "real": "https://nia.gov.gh/service/card-replacement-service/",
+        "rebuild": "nia-gh/services/replace-card.html"
+      },
+      {
+        "label": "Fees and charges",
+        "real": "https://nia.gov.gh/fees-and-charges-2026/",
+        "rebuild": "nia-gh/fees.html"
+      }
     ]
   }
 ]
