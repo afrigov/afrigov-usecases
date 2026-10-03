@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-02",
+  "checkedAt": "2026-10-03",
   "tool": "afrigov-audit 0.2.0",
   "usecases": {
     "fmcide": {
@@ -9,18 +9,18 @@
         "grade": "A"
       },
       "real": {
-        "score": 58,
+        "score": 52,
         "grade": "D",
-        "checkedAt": "2026-10-02"
+        "checkedAt": "2026-10-03"
       },
       "compare": [
         {
           "label": "Home",
           "url": "https://fmcide.gov.ng/",
           "real": {
-            "score": 58,
+            "score": 52,
             "grade": "D",
-            "checkedAt": "2026-10-02"
+            "checkedAt": "2026-10-03"
           },
           "rebuild": {
             "score": 100,
@@ -33,7 +33,7 @@
           "real": {
             "score": 73,
             "grade": "C",
-            "checkedAt": "2026-10-02"
+            "checkedAt": "2026-10-03"
           },
           "rebuild": {
             "score": 100,
@@ -46,7 +46,7 @@
           "real": {
             "score": 58,
             "grade": "D",
-            "checkedAt": "2026-10-02"
+            "checkedAt": "2026-10-03"
           },
           "rebuild": {
             "score": 100,
@@ -64,7 +64,7 @@
       "real": {
         "score": 38.5,
         "grade": "F",
-        "checkedAt": "2026-10-02"
+        "checkedAt": "2026-10-03"
       },
       "compare": [
         {
@@ -73,7 +73,7 @@
           "real": {
             "score": 38.5,
             "grade": "F",
-            "checkedAt": "2026-10-02"
+            "checkedAt": "2026-10-03"
           },
           "rebuild": {
             "score": 100,
@@ -86,7 +86,7 @@
           "real": {
             "score": 68.5,
             "grade": "C",
-            "checkedAt": "2026-10-02"
+            "checkedAt": "2026-10-03"
           },
           "rebuild": {
             "score": 100,
@@ -99,7 +99,7 @@
           "real": {
             "score": 65.5,
             "grade": "C",
-            "checkedAt": "2026-10-02"
+            "checkedAt": "2026-10-03"
           },
           "rebuild": {
             "score": 100,

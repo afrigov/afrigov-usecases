@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" width="320" height="200" role="img" aria-labelledby="card-title">
+  <title id="card-title">A simplified drawing of a Ghana Card</title>
+  <rect width="320" height="200" rx="14" fill="#f6f4ea"/>
+  <rect width="320" height="200" rx="14" fill="none" stroke="#9aa39b" stroke-width="2"/>
+  <rect x="0" y="0" width="320" height="30" rx="14" fill="#006b3f"/>
+  <rect x="0" y="16" width="320" height="14" fill="#006b3f"/>
+  <rect x="0" y="30" width="320" height="4" fill="#fcd116"/>
+  <rect x="0" y="34" width="320" height="4" fill="#ce1126"/>
+  <rect x="20" y="52" width="76" height="96" rx="4" fill="#c7d6e3"/>
+  <circle cx="58" cy="86" r="16" fill="#7d8f9a"/>
+  <path d="M30 148 C30 118 42 112 58 112 C74 112 86 118 86 148 Z" fill="#7d8f9a"/>
+  <rect x="112" y="56" width="26" height="20" rx="3" fill="#d4af37"/>
+  <rect x="116" y="60" width="18" height="12" rx="1" fill="none" stroke="#8a6d1d"/>
+  <rect x="150" y="58" width="130" height="8" rx="2" fill="#4a5a52"/>
+  <rect x="150" y="76" width="96" height="6" rx="2" fill="#9aa39b"/>
+  <rect x="112" y="96" width="168" height="6" rx="2" fill="#9aa39b"/>
+  <rect x="112" y="112" width="120" height="6" rx="2" fill="#9aa39b"/>
+  <rect x="112" y="128" width="150" height="6" rx="2" fill="#9aa39b"/>
+  <rect x="20" y="166" width="280" height="16" rx="2" fill="#e9e6d6"/>
+  <rect x="26" y="170" width="268" height="3" fill="#4a5a52"/>
+  <rect x="26" y="176" width="200" height="3" fill="#4a5a52"/>
+  <circle cx="284" cy="150" r="14" fill="none" stroke="#006b3f" stroke-width="3"/>
+  <circle cx="284" cy="150" r="5" fill="#006b3f"/>
+</svg>

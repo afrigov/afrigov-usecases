@@ -2,7 +2,7 @@
 import os, html, re, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/")
+CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/")
 REAL = "https://nia.gov.gh/"
 ORG = "National Identification Authority"
 ICONS = json.load(open(os.path.join(HERE, "assets", "social-icons.json")))
@@ -36,7 +36,7 @@ def describe(title, main):
     return text
 
 
-def shell(title, main, current=None, root="", breadcrumb=None, wide=False, local_css=""):
+def shell(title, main, current=None, root="", breadcrumb=None, wide=False):
     """One page. `wide` leaves the main element without a container, for pages built from full-width bands."""
     page_title = ORG if title == ORG else f"{title} – {ORG}"
     description = html.escape(describe(title, main), quote=True)
@@ -54,7 +54,7 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False, local
         f'              <li><a class="ag-social__link" href="{url}"><svg class="ag-social__icon" aria-hidden="true" viewBox="0 0 24 24"><path d="{ICONS[name]}"/></svg>{name}</a></li>'
         for name, url in SOCIAL
     )
-    main_class = "ag-main" if wide else "ag-main ag-container"
+    main_class = "ag-main ag-main--flush" if wide else "ag-main ag-container"
     return f'''<!doctype html>
 <html lang="en">
   <head>
@@ -73,7 +73,7 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False, local
       }});
     </script>
     <link rel="stylesheet" href="{CDN}core.min.css" />
-    <link rel="stylesheet" href="{CDN}gh.min.css" />{local_css}
+    <link rel="stylesheet" href="{CDN}gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -90,7 +90,7 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False, local
       </div>
     </section>
 
-    <header class="ag-header ag-header--primary">
+    <header class="ag-header ag-header--primary ag-header--striped">
       <div class="ag-container ag-header__inner">
         <a class="ag-header__brand" href="{r}index.html">
           <img class="ag-header__logo" src="{r}assets/mark.svg" alt="" width="40" height="40" />
@@ -243,8 +243,8 @@ def cards(items, level="h2", variant="", wide=False):
 
 
 def steps(items):
-    """The numbered steps of a process. afrigov has no steps component yet, so this is an ordered list in prose."""
-    return "        <ol>\n" + "".join(f"          <li>{s}</li>\n" for s in items) + "        </ol>"
+    """The numbered steps of a process."""
+    return '        <ol class="ag-steps">\n' + "".join(f'          <li class="ag-steps__item">{s}</li>\n' for s in items) + "        </ol>"
 
 
 def badge(text, kind="neutral"):
@@ -254,15 +254,6 @@ def badge(text, kind="neutral"):
 P = {}
 
 # ---------------------------------------------------------------- home
-
-# Finding 1: a band directly under the header, or directly above the footer, leaves a strip of
-# page colour, because the main element has padding at both ends. This is the one page-local
-# rule in the rebuild.
-HOME_CSS = '''
-    <!-- Page-local CSS, a finding: see FINDINGS.md, number 1. -->
-    <style>
-      .ag-main { padding-block: 0; }
-    </style>'''
 
 TASKS = [
     ("Register for a Ghana Card", "For Ghanaians living in Ghana, at any age. What to bring and what happens at the centre.", "services/register-in-ghana.html", badge("Free under 25", "success")),
@@ -302,7 +293,7 @@ FIGURES = [
     ("238,263", "Non-citizens enrolled"),
 ]
 
-P["index.html"] = shell(ORG, f'''      <div class="ag-band ag-band--primary">
+P["index.html"] = shell(ORG, f'''      <div class="ag-band ag-band--tint">
         <div class="ag-hero">
           <div class="ag-container ag-hero__inner">
             <div>
@@ -322,13 +313,31 @@ P["index.html"] = shell(ORG, f'''      <div class="ag-band ag-band--primary">
           <h2 class="ag-alert__title">A first Ghana Card is free for under-25s at district offices</h2>
           <p>It is GH₵30 if you are 25 or over. Only Premium Centres charge more, and fees are paid to the bank, never to a person. <a href="scam-alert.html">How to spot and report a scam</a>.</p>
         </div>
+
+        <h2>What do you need to do?</h2>
+{cards(TASKS, level="h3")}
+        <p><a href="services.html">All services</a></p>
       </div>
 
-      <div class="ag-band ag-band--tint">
+      <div class="ag-band ag-band--dark">
         <div class="ag-container">
-          <h2 class="ag-mt-0">What do you need to do?</h2>
-{cards(TASKS, level="h3")}
-          <p><a href="services.html">All services</a></p>
+          <div class="ag-feature ag-mb-0">
+            <figure class="ag-figure ag-feature__media">
+              <img class="ag-figure__image" src="assets/card.svg" alt="A simplified drawing of a Ghana Card: a green band with the flag's gold and red lines across the top, a photograph on the left, a gold chip, lines of printed details, and a machine-readable strip along the bottom." width="320" height="200" loading="lazy" />
+            </figure>
+            <div class="ag-feature__body">
+              <h2 class="ag-feature__title">The Ghana Card</h2>
+              <p>The national identity card, with the features of an e-passport. It lasts ten years.</p>
+              <ul class="ag-feature__list">
+                <li>Your photograph, name, date of birth and personal identification number</li>
+                <li>A chip that holds your fingerprints and other biometrics</li>
+                <li>An aluminium watermark and ultraviolet printing</li>
+                <li>Raised marks so people who cannot see can tell it apart</li>
+                <li>The ECOWAS logo and a machine-readable zone, for travel in the region</li>
+              </ul>
+              <p><a href="questions.html#system">More about the card</a></p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -338,24 +347,18 @@ P["index.html"] = shell(ORG, f'''      <div class="ag-band ag-band--primary">
     ("Fees and charges", "What each service costs at a district office, at a Premium Centre and abroad.", "fees.html", None),
     ("Find an office", "The head office, regional offices and district offices, with phone numbers and opening hours.", "offices.html", None),
     ("Questions and answers", "Who can register, what to bring, and what to do when your details change.", "questions.html", None),
-], level="h3", variant="ag-card--plain")}
+], level="h3", variant="ag-card--accent")}
 
         <h2 id="news">News</h2>
         <ul class="ag-list">{news_items(NEWS[:5])}
         </ul>
         <p><a href="news.html">All news</a></p>
-      </div>
 
-      <div class="ag-band ag-band--tint">
-        <div class="ag-container">
-          <h2 class="ag-mt-0">Registration so far</h2>
-          <p>Figures as at 17 August 2026.</p>
-{cards([(n, label, None, None) for n, label in FIGURES], level="h3", variant="ag-card--plain")}
-          <p><a href="statistics.html">More registration statistics</a></p>
-        </div>
-      </div>
+        <h2>Registration so far</h2>
+        <dl class="ag-stats">{"".join(f'<div class="ag-stats__item"><dt class="ag-stats__label">{label}</dt><dd class="ag-stats__value">{n}</dd></div>' for n, label in FIGURES)}
+        </dl>
+        <p class="ag-caption">Figures as at 17 August 2026. <a href="statistics.html">More registration statistics</a>.</p>
 
-      <div class="ag-container">
         <section class="ag-statement" aria-labelledby="executive-secretary">
           <figure class="ag-figure ag-statement__media">
             <img class="ag-figure__image" src="{PORTRAIT}" alt="" width="320" height="320" loading="lazy" />
@@ -370,13 +373,16 @@ P["index.html"] = shell(ORG, f'''      <div class="ag-band ag-band--primary">
         </section>
       </div>
 
-      <div class="ag-band ag-band--primary ag-mb-0">
+      <div class="ag-band ag-band--accent ag-mb-0">
         <div class="ag-container">
           <h2 class="ag-mt-0">Does your organisation need to confirm who people are?</h2>
           <p class="ag-lead">Since June 2026 a Ghana Card must be checked against the register, with the holder's fingerprint or face. Looking at the card, or photocopying it, is no longer enough.</p>
-          <div class="ag-button-group"><a class="ag-button" href="services/verification.html">Join the verification platform</a></div>
+          <div class="ag-button-group">
+            <a class="ag-button" href="services/verification.html">Join the verification platform</a>
+            <a class="ag-button ag-button--secondary" href="news/biometric-verification.html">Read the announcement</a>
+          </div>
         </div>
-      </div>''', current="Home", wide=True, local_css=HOME_CSS)
+      </div>''', current="Home", wide=True)
 
 # ---------------------------------------------------------------- services
 
@@ -1062,14 +1068,31 @@ MANAGEMENT = [
     ("Mr Isaac Tetteh", "Head, Procurement"),
 ]
 
+def people(rows, variant=""):
+    items = "".join(
+        f'''
+        <li class="ag-person">
+          <img class="ag-person__photo" src="{PORTRAIT}" alt="" width="{128 if variant else 320}" height="{128 if variant else 320}" loading="lazy" />
+          <div>
+            <h3 class="ag-person__name">{name}</h3>
+            <p class="ag-person__role">{role}</p>
+          </div>
+        </li>'''
+        for name, role in rows
+    )
+    return f'      <ul class="ag-people{(" " + variant) if variant else ""}">{items}\n      </ul>'
+
+
 P["board.html"] = shell("Board and management", f'''      <div class="ag-prose">
         <h1 class="ag-heading-xl">Board and management</h1>
-        <p class="ag-lead">The governing board sets the authority's direction. The management team runs it day to day.</p>
+        <p class="ag-lead">The governing board sets the authority's direction. The management team runs it day to day. The portraits on the authority's site are not reproduced; grey frames stand where they go.</p>
         <h2 id="board">Governing board</h2>
-      </div>{table("Governing board", ["Name", "Role"], BOARD, hide_caption=True, striped=False)}
+      </div>
+{people(BOARD)}
       <div class="ag-prose">
         <h2 id="management">Management</h2>
-      </div>{table("Management", ["Name", "Role"], MANAGEMENT, hide_caption=True, striped=False)}''', current="About", breadcrumb=crumbs(("about.html", "About"), ("board.html", "Board and management")))
+      </div>
+{people(MANAGEMENT, "ag-people--rows")}''', current="About", breadcrumb=crumbs(("about.html", "About"), ("board.html", "Board and management")))
 
 AGENCIES = [
     "Universal Merchant Bank", "OmniBSIC Bank Ghana", "Bank of Africa Ghana", "Access Bank Ghana", "NIB Ghana", "Société Générale Ghana",

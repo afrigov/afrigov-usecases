@@ -8,7 +8,7 @@ It is not the authority's website and says so on every page.
 
 The first use case, fmcide.gov.ng, is a ministry: news, initiatives and documents. This one is a service agency. People come to it to do something: get a card, replace one, change their details, find an office, check a fee. The real home page has 252 links and is about eight screens tall. The rebuild's home page leads with six tasks.
 
-It is also a different country and a different look. It uses the Ghana pack, a header in the primary colour, full-width bands and a light footer, where the first use case has a white header, an image hero and a dark footer.
+It is also a different country and a different look. It uses the Ghana pack with the flag stripe under the header, a header in the primary colour, full-width bands including one in Ghana's gold, and a light footer, where the first use case has a white header, an image hero and a dark footer.
 
 ## Baseline
 
@@ -20,23 +20,23 @@ Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.2.0 on 
 | Card replacement | 68.5, C | Low contrast, links with no name, no skip link |
 | Fees and charges | 65.5, C | Low contrast, links with no name, no skip link |
 
-Every rebuilt page scores 100, A.
+Every rebuilt page scores 100, A, on afrigov 0.9.0 from the CDN.
 
 ## Rules
 
 - **Install like an agency would.** Two link tags from the CDN, the Ghana pack, the optional script. No build step beyond the page generator.
 - **Structure and facts are the real site's.** Fees, steps, requirements, names and phone numbers were taken from nia.gov.gh on 2 October 2026. The wording is condensed and rewritten. Nothing is quoted at length.
-- **No images from the site.** No photographs, no logo, no picture of a Ghana Card. The header carries a generic mark, and a grey frame stands where a portrait would go.
+- **No images from the site.** No photographs, no logo, no picture of a real Ghana Card. The header carries a generic mark, a grey frame stands where a portrait would go, and the card on the home page is a simplified drawing.
 - **Nothing that could be used to defraud.** The authority's bank account details are left out and the page that would carry them says where to find the real ones. Every link to pay, apply or download goes to nia.gov.gh.
 - **Nothing you type is sent.** The contact form and the replacement journey submit nothing. Fields for personal details have no `name` attribute, so the browser leaves them out of the request.
-- **Every gap is a finding.** If a page needs something afrigov does not have, it goes in `FINDINGS.md` and the page uses the nearest thing. Page-local CSS is allowed only in a marked block. There is one, on the home page.
+- **Every gap is a finding.** If a page needs something afrigov does not have, it goes in `FINDINGS.md` and the page uses the nearest thing. Page-local CSS is allowed only in a marked block. Since afrigov 0.9 there is none.
 - **It should look like the finished site, and never be mistaken for it.** The banner at the top says it is an unofficial rebuild, with a disclosure that links to nia.gov.gh. Every page has `noindex`.
 
 ## Page map
 
 | Real page | Rebuilt file | Notes |
 | --- | --- | --- |
-| Home | `index.html` | Hero in a primary band, six tasks as cards, news, key figures, the Executive Secretary, a call to organisations |
+| Home | `index.html` | Hero on a tinted band, six tasks as cards, the card described beside a drawing, news, key figures, the Executive Secretary, a call to organisations on an accent band |
 | Services | `services.html` | The seven services in four groups |
 | Registration of Ghanaians in Ghana | `services/register-in-ghana.html` | Who, what to bring, steps, cost, questions |
 | Registration of Ghanaians living abroad | `services/register-abroad.html` | Steps and fees by region of the world |
@@ -51,7 +51,7 @@ Every rebuilt page scores 100, A.
 | FAQs | `questions.html` | 37 of the 70 answers, in seven groups |
 | Scam alert | `scam-alert.html` | |
 | About, and the Executive Secretary's profile | `about.html` | Mandate, vision and mission, the identification system, the technical partner |
-| Governing board and management | `board.html` | Two tables |
+| Governing board and management | `board.html` | People with portrait frames: a grid for the board, rows for management |
 | User agencies | `user-agencies.html` | The first 25 private institutions |
 | Registration statistics | `statistics.html` | Six figures as a table |
 | News | `news.html` | Eight headlines. One is rebuilt, the rest link to the real posts |

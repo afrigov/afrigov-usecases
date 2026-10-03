@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/gh.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <header class="ag-header ag-header--primary">
+    <header class="ag-header ag-header--primary ag-header--striped">
       <div class="ag-container ag-header__inner">
         <a class="ag-header__brand" href="../index.html">
           <img class="ag-header__logo" src="../assets/mark.svg" alt="" width="40" height="40" />
@@ -110,12 +110,12 @@
 
         <h2 id="steps">What happens at the centre</h2>
         <p>A registration officer checks your documents, then:</p>
-        <ol>
-          <li>Interviews you and helps you fill in the application form.</li>
-          <li>Enters the details from your form in the National Identity Register.</li>
-          <li>Takes your ten fingerprints, a scan of your irises, your photograph and your signature.</li>
-          <li>Prints your details for you to check and sign or thumbprint. If anything is wrong, say so now. Corrections after this point are charged for.</li>
-          <li>Prints your Ghana Card and hands it to you.</li>
+        <ol class="ag-steps">
+          <li class="ag-steps__item">Interviews you and helps you fill in the application form.</li>
+          <li class="ag-steps__item">Enters the details from your form in the National Identity Register.</li>
+          <li class="ag-steps__item">Takes your ten fingerprints, a scan of your irises, your photograph and your signature.</li>
+          <li class="ag-steps__item">Prints your details for you to check and sign or thumbprint. If anything is wrong, say so now. Corrections after this point are charged for.</li>
+          <li class="ag-steps__item">Prints your Ghana Card and hands it to you.</li>
         </ol>
         <div class="ag-inset">
           <p>At a Premium Centre a first card is GH₵410, paid at a CalBank branch, with the CalBank app, or by dialling *771#. <a href="../fees.html">All fees</a>.</p>
@@ -211,6 +211,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/afrigov.iife.js"></script>
   </body>
 </html>

@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/gh.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <header class="ag-header ag-header--primary">
+    <header class="ag-header ag-header--primary ag-header--striped">
       <div class="ag-container ag-header__inner">
         <a class="ag-header__brand" href="../index.html">
           <img class="ag-header__logo" src="../assets/mark.svg" alt="" width="40" height="40" />
@@ -103,12 +103,12 @@
 
         <h2 id="steps">What happens at the interview</h2>
         <p>A registration officer checks your documents, then:</p>
-        <ol>
-          <li>Reviews the application form you completed online.</li>
-          <li>Enters your details in the National Identity Register.</li>
-          <li>Takes your ten fingerprints, a scan of your irises, your photograph and your signature.</li>
-          <li>Prints your details for you to check and sign or thumbprint. If anything is wrong, say so now.</li>
-          <li>Prints your Ghana Card and hands it to you.</li>
+        <ol class="ag-steps">
+          <li class="ag-steps__item">Reviews the application form you completed online.</li>
+          <li class="ag-steps__item">Enters your details in the National Identity Register.</li>
+          <li class="ag-steps__item">Takes your ten fingerprints, a scan of your irises, your photograph and your signature.</li>
+          <li class="ag-steps__item">Prints your details for you to check and sign or thumbprint. If anything is wrong, say so now.</li>
+          <li class="ag-steps__item">Prints your Ghana Card and hands it to you.</li>
         </ol>
 
         <h2 id="cost">What it costs</h2>
@@ -190,6 +190,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/afrigov.iife.js"></script>
   </body>
 </html>

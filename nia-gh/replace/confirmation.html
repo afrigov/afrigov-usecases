@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/gh.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <header class="ag-header ag-header--primary">
+    <header class="ag-header ag-header--primary ag-header--striped">
       <div class="ag-container ag-header__inner">
         <a class="ag-header__brand" href="../index.html">
           <img class="ag-header__logo" src="../assets/mark.svg" alt="" width="40" height="40" />
@@ -65,11 +65,11 @@
       <div class="ag-prose">
         <div class="ag-inset"><p>A demonstration. The real service is in person, and nothing you type here is sent or stored.</p></div>
         <h2>What happens next</h2>
-        <ol>
-          <li>An approval officer reviews your request. We text you the result, usually within two working days.</li>
-          <li>You pay the fee at a CalBank branch, with the CalBank app, or by dialling *771#.</li>
-          <li>You visit the office you chose, with the original police extract. Your fingerprints, irises and photograph are taken.</li>
-          <li>Your new Ghana Card is printed and handed to you.</li>
+        <ol class="ag-steps">
+          <li class="ag-steps__item">An approval officer reviews your request. We text you the result, usually within two working days.</li>
+          <li class="ag-steps__item">You pay the fee at a CalBank branch, with the CalBank app, or by dialling *771#.</li>
+          <li class="ag-steps__item">You visit the office you chose, with the original police extract. Your fingerprints, irises and photograph are taken.</li>
+          <li class="ag-steps__item">Your new Ghana Card is printed and handed to you.</li>
         </ol>
         <p><a href="../services/replace-card.html">How to replace a card today</a>, or <a href="../index.html">return to the home page</a>.</p>
       </div>
@@ -139,6 +139,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/afrigov.iife.js"></script>
   </body>
 </html>

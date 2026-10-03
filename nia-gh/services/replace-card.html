@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/gh.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <header class="ag-header ag-header--primary">
+    <header class="ag-header ag-header--primary ag-header--striped">
       <div class="ag-container ag-header__inner">
         <a class="ag-header__brand" href="../index.html">
           <img class="ag-header__logo" src="../assets/mark.svg" alt="" width="40" height="40" />
@@ -69,13 +69,13 @@
         </ul>
 
         <h2 id="steps">What happens at the office</h2>
-        <ol>
-          <li>A registration officer reviews your police extract and, if the card is damaged, the card itself.</li>
-          <li>The officer helps you complete and sign or mark the electronic request form, and submits it for you.</li>
-          <li>An approval officer reviews the request. If it is declined you are told why.</li>
-          <li>Once it is approved, you pay at a CalBank branch, with the CalBank app, or by dialling *771#. A damaged card is taken from you.</li>
-          <li>The officer enters the serial number and PIN from your payment, and takes your fingerprints, iris scan, photograph and signature.</li>
-          <li>Your new Ghana Card is printed and handed to you.</li>
+        <ol class="ag-steps">
+          <li class="ag-steps__item">A registration officer reviews your police extract and, if the card is damaged, the card itself.</li>
+          <li class="ag-steps__item">The officer helps you complete and sign or mark the electronic request form, and submits it for you.</li>
+          <li class="ag-steps__item">An approval officer reviews the request. If it is declined you are told why.</li>
+          <li class="ag-steps__item">Once it is approved, you pay at a CalBank branch, with the CalBank app, or by dialling *771#. A damaged card is taken from you.</li>
+          <li class="ag-steps__item">The officer enters the serial number and PIN from your payment, and takes your fingerprints, iris scan, photograph and signature.</li>
+          <li class="ag-steps__item">Your new Ghana Card is printed and handed to you.</li>
         </ol>
 
         <h2 id="cost">What it costs</h2>
@@ -177,6 +177,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/afrigov.iife.js"></script>
   </body>
 </html>

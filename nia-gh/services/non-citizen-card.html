@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/gh.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -33,7 +33,7 @@
       </div>
     </section>
 
-    <header class="ag-header ag-header--primary">
+    <header class="ag-header ag-header--primary ag-header--striped">
       <div class="ag-container ag-header__inner">
         <a class="ag-header__brand" href="../index.html">
           <img class="ag-header__logo" src="../assets/mark.svg" alt="" width="40" height="40" />
@@ -79,12 +79,12 @@
         </ul>
 
         <h2 id="steps">What happens at the centre</h2>
-        <ol>
-          <li>Buy a scratch card at a CalBank or Access Bank branch, with the CalBank app, or by USSD.</li>
-          <li>A registration officer interviews you and you complete the application form.</li>
-          <li>A data entry officer checks the PIN on your scratch card, takes your fingerprints, portrait, iris scan and signature, and enters your form.</li>
-          <li>You check the details that were entered. If anything is wrong, say so now.</li>
-          <li>You collect your card from the issuance desk.</li>
+        <ol class="ag-steps">
+          <li class="ag-steps__item">Buy a scratch card at a CalBank or Access Bank branch, with the CalBank app, or by USSD.</li>
+          <li class="ag-steps__item">A registration officer interviews you and you complete the application form.</li>
+          <li class="ag-steps__item">A data entry officer checks the PIN on your scratch card, takes your fingerprints, portrait, iris scan and signature, and enters your form.</li>
+          <li class="ag-steps__item">You check the details that were entered. If anything is wrong, say so now.</li>
+          <li class="ag-steps__item">You collect your card from the issuance desk.</li>
         </ol>
 
         <h2 id="cost">What it costs</h2>
@@ -165,6 +165,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.8/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.9/dist/afrigov.iife.js"></script>
   </body>
 </html>
