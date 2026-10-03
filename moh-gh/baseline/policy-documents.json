@@ -1,0 +1,240 @@
+{
+  "url": "https://moh.gov.gh/policy-documents/",
+  "finalUrl": "https://moh.gov.gh/policy-documents/",
+  "checkedAt": "2026-10-03T18:51:52.141Z",
+  "tool": {
+    "name": "afrigov-audit",
+    "version": "0.2.0",
+    "axeVersion": "4.13.0"
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "name": "phone",
+        "width": 375,
+        "height": 800
+      },
+      "facts": {
+        "title": "Policy Documents - Ministry Of Health",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1.0",
+        "allowsZoom": true,
+        "smallTargets": [
+          "a",
+          "a",
+          "input#wp-comment-cookies-consent"
+        ],
+        "targetsUnder44": 19,
+        "interactiveCount": 24,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        },
+        {
+          "id": "ag-small-targets",
+          "impact": "serious",
+          "help": "Links or controls smaller than 24px at phone width",
+          "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 3,
+          "examples": [
+            "a",
+            "a",
+            "input#wp-comment-cookies-consent"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Make links and controls at least 48px tall at phone width."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "avoid-inline-spacing",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "input-button-name",
+        "label",
+        "link-in-text-block",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size",
+        "valid-lang"
+      ],
+      "ms": 5123
+    },
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "facts": {
+        "title": "Policy Documents - Ministry Of Health",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1.0",
+        "allowsZoom": true,
+        "smallTargets": [
+          "a",
+          "a",
+          "input#wp-comment-cookies-consent"
+        ],
+        "targetsUnder44": 14,
+        "interactiveCount": 19,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "autocomplete-valid",
+        "avoid-inline-spacing",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "duplicate-id-aria",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "input-button-name",
+        "label",
+        "link-in-text-block",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size",
+        "valid-lang"
+      ],
+      "ms": 5545
+    }
+  ],
+  "findings": [
+    {
+      "id": "ag-small-targets",
+      "impact": "serious",
+      "help": "Links or controls smaller than 24px at phone width",
+      "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+      "wcag": [
+        "2.5.8"
+      ],
+      "nodes": 3,
+      "examples": [
+        "a",
+        "a",
+        "input#wp-comment-cookies-consent"
+      ],
+      "viewports": [
+        "phone"
+      ],
+      "fix": {
+        "component": "Spacing and layout",
+        "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+        "advice": "Make links and controls at least 48px tall at phone width."
+      }
+    },
+    {
+      "id": "ag-no-skip-link",
+      "impact": "moderate",
+      "help": "No skip link to the main content",
+      "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+      "wcag": [
+        "2.4.1"
+      ],
+      "nodes": 1,
+      "examples": [],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Skip link",
+        "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+        "advice": "Add a skip link as the first focusable element."
+      }
+    }
+  ],
+  "score": 89.5,
+  "grade": "B",
+  "summary": {
+    "critical": 0,
+    "serious": 1,
+    "moderate": 1,
+    "minor": 0
+  }
+}

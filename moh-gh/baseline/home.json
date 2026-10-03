@@ -1,0 +1,663 @@
+{
+  "url": "https://www.moh.gov.gh/",
+  "finalUrl": "https://moh.gov.gh/",
+  "checkedAt": "2026-10-03T18:51:20.697Z",
+  "tool": {
+    "name": "afrigov-audit",
+    "version": "0.2.0",
+    "axeVersion": "4.13.0"
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "name": "phone",
+        "width": 375,
+        "height": 800
+      },
+      "facts": {
+        "title": "Moh.Gov.gh - Ministry Of Health",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1.0",
+        "allowsZoom": true,
+        "smallTargets": [
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button"
+        ],
+        "targetsUnder44": 7,
+        "interactiveCount": 44,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 1,
+          "examples": [
+            "#slick-slide00"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "Prefer native elements; they need no ARIA."
+          }
+        },
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "help": "ARIA hidden element must not be focusable or contain focusable elements",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 5,
+          "examples": [
+            "#slick-slide01",
+            "#slick-slide02",
+            "#slick-slide03",
+            "#slick-slide04",
+            "#slick-slide05"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Details",
+            "url": "https://omoyolab.github.io/afrigov/components/details.html",
+            "advice": "Do not hide focusable content with aria-hidden."
+          }
+        },
+        {
+          "id": "aria-input-field-name",
+          "impact": "serious",
+          "help": "ARIA input fields must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 2,
+          "examples": [
+            ".tie-slick-slider > .slick-list.draggable[aria-live=\"polite\"] > .slick-track[role=\"listbox\"]",
+            ".scrolling-slider > .slick-list.draggable[aria-live=\"polite\"] > .slick-track[role=\"listbox\"]"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Radios",
+            "url": "https://omoyolab.github.io/afrigov/components/radios.html",
+            "advice": "Use native radios and checkboxes in a fieldset with a legend."
+          }
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "help": "ARIA attributes must conform to valid values",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 1,
+          "examples": [
+            "#slick-slide00"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "ARIA attributes must reference ids that exist and use allowed values."
+          }
+        },
+        {
+          "id": "nested-interactive",
+          "impact": "serious",
+          "help": "Interactive controls must not be nested",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 2,
+          "examples": [
+            "div[data-aria-describedby=\"slick-slide10\"]",
+            "div[data-aria-describedby=\"slick-slide00\"]"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Service card",
+            "url": "https://omoyolab.github.io/afrigov/components/service-card.html",
+            "advice": "One link per card, stretched with CSS, not nested controls."
+          }
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "help": "All touch targets must be 24px large, or leave sufficient space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 1,
+          "examples": [
+            "#slick-slide00 > button"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Interactive elements are at least 48px tall in afrigov."
+          }
+        },
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        },
+        {
+          "id": "ag-small-targets",
+          "impact": "serious",
+          "help": "Links or controls smaller than 24px at phone width",
+          "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 6,
+          "examples": [
+            "button",
+            "button",
+            "button",
+            "button",
+            "button"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Make links and controls at least 48px tall at phone width."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-required-children",
+        "aria-required-parent",
+        "aria-roles",
+        "aria-toggle-field-name",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ],
+      "ms": 8782
+    },
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "facts": {
+        "title": "Moh.Gov.gh - Ministry Of Health",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1.0",
+        "allowsZoom": true,
+        "smallTargets": [
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button",
+          "button"
+        ],
+        "targetsUnder44": 12,
+        "interactiveCount": 56,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "aria-allowed-attr",
+          "impact": "critical",
+          "help": "Elements must only use supported ARIA attributes",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 2,
+          "examples": [
+            "#slick-slide10",
+            "#slick-slide00"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "Prefer native elements; they need no ARIA."
+          }
+        },
+        {
+          "id": "aria-hidden-focus",
+          "impact": "serious",
+          "help": "ARIA hidden element must not be focusable or contain focusable elements",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 9,
+          "examples": [
+            "#slick-slide11",
+            "#slick-slide12",
+            "#slick-slide13",
+            "#slick-slide14",
+            "#slick-slide15"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Details",
+            "url": "https://omoyolab.github.io/afrigov/components/details.html",
+            "advice": "Do not hide focusable content with aria-hidden."
+          }
+        },
+        {
+          "id": "aria-input-field-name",
+          "impact": "serious",
+          "help": "ARIA input fields must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 2,
+          "examples": [
+            ".tie-slick-slider > .slick-list.draggable[aria-live=\"polite\"] > .slick-track[role=\"listbox\"]",
+            ".scrolling-slider > .slick-list.draggable[aria-live=\"polite\"] > .slick-track[role=\"listbox\"]"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Radios",
+            "url": "https://omoyolab.github.io/afrigov/components/radios.html",
+            "advice": "Use native radios and checkboxes in a fieldset with a legend."
+          }
+        },
+        {
+          "id": "aria-valid-attr-value",
+          "impact": "critical",
+          "help": "ARIA attributes must conform to valid values",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 2,
+          "examples": [
+            "#slick-slide10",
+            "#slick-slide00"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "ARIA attributes must reference ids that exist and use allowed values."
+          }
+        },
+        {
+          "id": "nested-interactive",
+          "impact": "serious",
+          "help": "Interactive controls must not be nested",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=playwright",
+          "wcag": [
+            "4.1.2"
+          ],
+          "nodes": 5,
+          "examples": [
+            "div[data-aria-describedby=\"slick-slide10\"]",
+            "div[data-aria-describedby=\"slick-slide00\"]",
+            "div[data-aria-describedby=\"slick-slide01\"]",
+            "div[data-aria-describedby=\"slick-slide02\"]",
+            "div[data-aria-describedby=\"slick-slide03\"]"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Service card",
+            "url": "https://omoyolab.github.io/afrigov/components/service-card.html",
+            "advice": "One link per card, stretched with CSS, not nested controls."
+          }
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "help": "All touch targets must be 24px large, or leave sufficient space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 2,
+          "examples": [
+            "#slick-slide10 > button",
+            "#slick-slide00 > button"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Interactive elements are at least 48px tall in afrigov."
+          }
+        },
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-required-children",
+        "aria-required-parent",
+        "aria-roles",
+        "aria-toggle-field-name",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "button-name",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "nested-interactive",
+        "target-size"
+      ],
+      "ms": 8300
+    }
+  ],
+  "findings": [
+    {
+      "id": "aria-allowed-attr",
+      "impact": "critical",
+      "help": "Elements must only use supported ARIA attributes",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-allowed-attr?application=playwright",
+      "wcag": [
+        "4.1.2"
+      ],
+      "nodes": 2,
+      "examples": [
+        "#slick-slide00",
+        "#slick-slide10"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Button",
+        "url": "https://omoyolab.github.io/afrigov/components/button.html",
+        "advice": "Prefer native elements; they need no ARIA."
+      }
+    },
+    {
+      "id": "aria-valid-attr-value",
+      "impact": "critical",
+      "help": "ARIA attributes must conform to valid values",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-valid-attr-value?application=playwright",
+      "wcag": [
+        "4.1.2"
+      ],
+      "nodes": 2,
+      "examples": [
+        "#slick-slide00",
+        "#slick-slide10"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Button",
+        "url": "https://omoyolab.github.io/afrigov/components/button.html",
+        "advice": "ARIA attributes must reference ids that exist and use allowed values."
+      }
+    },
+    {
+      "id": "aria-hidden-focus",
+      "impact": "serious",
+      "help": "ARIA hidden element must not be focusable or contain focusable elements",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-hidden-focus?application=playwright",
+      "wcag": [
+        "4.1.2"
+      ],
+      "nodes": 9,
+      "examples": [
+        "#slick-slide01",
+        "#slick-slide02",
+        "#slick-slide03",
+        "#slick-slide04",
+        "#slick-slide05"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Details",
+        "url": "https://omoyolab.github.io/afrigov/components/details.html",
+        "advice": "Do not hide focusable content with aria-hidden."
+      }
+    },
+    {
+      "id": "ag-small-targets",
+      "impact": "serious",
+      "help": "Links or controls smaller than 24px at phone width",
+      "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+      "wcag": [
+        "2.5.8"
+      ],
+      "nodes": 6,
+      "examples": [
+        "button",
+        "button",
+        "button",
+        "button",
+        "button"
+      ],
+      "viewports": [
+        "phone"
+      ],
+      "fix": {
+        "component": "Spacing and layout",
+        "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+        "advice": "Make links and controls at least 48px tall at phone width."
+      }
+    },
+    {
+      "id": "nested-interactive",
+      "impact": "serious",
+      "help": "Interactive controls must not be nested",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/nested-interactive?application=playwright",
+      "wcag": [
+        "4.1.2"
+      ],
+      "nodes": 5,
+      "examples": [
+        "div[data-aria-describedby=\"slick-slide10\"]",
+        "div[data-aria-describedby=\"slick-slide00\"]",
+        "div[data-aria-describedby=\"slick-slide01\"]",
+        "div[data-aria-describedby=\"slick-slide02\"]",
+        "div[data-aria-describedby=\"slick-slide03\"]"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Service card",
+        "url": "https://omoyolab.github.io/afrigov/components/service-card.html",
+        "advice": "One link per card, stretched with CSS, not nested controls."
+      }
+    },
+    {
+      "id": "aria-input-field-name",
+      "impact": "serious",
+      "help": "ARIA input fields must have an accessible name",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-input-field-name?application=playwright",
+      "wcag": [
+        "4.1.2"
+      ],
+      "nodes": 2,
+      "examples": [
+        ".tie-slick-slider > .slick-list.draggable[aria-live=\"polite\"] > .slick-track[role=\"listbox\"]",
+        ".scrolling-slider > .slick-list.draggable[aria-live=\"polite\"] > .slick-track[role=\"listbox\"]"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Radios",
+        "url": "https://omoyolab.github.io/afrigov/components/radios.html",
+        "advice": "Use native radios and checkboxes in a fieldset with a legend."
+      }
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+      "wcag": [
+        "2.5.8"
+      ],
+      "nodes": 2,
+      "examples": [
+        "#slick-slide00 > button",
+        "#slick-slide10 > button"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Spacing and layout",
+        "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+        "advice": "Interactive elements are at least 48px tall in afrigov."
+      }
+    },
+    {
+      "id": "ag-no-skip-link",
+      "impact": "moderate",
+      "help": "No skip link to the main content",
+      "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+      "wcag": [
+        "2.4.1"
+      ],
+      "nodes": 1,
+      "examples": [],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Skip link",
+        "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+        "advice": "Add a skip link as the first focusable element."
+      }
+    }
+  ],
+  "score": 17.5,
+  "grade": "F",
+  "summary": {
+    "critical": 2,
+    "serious": 5,
+    "moderate": 1,
+    "minor": 0
+  }
+}

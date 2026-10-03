@@ -107,6 +107,59 @@
           }
         }
       ]
+    },
+    "moh-gh": {
+      "pages": 42,
+      "rebuild": {
+        "score": 100,
+        "grade": "A"
+      },
+      "real": {
+        "score": 17.5,
+        "grade": "F",
+        "checkedAt": "2026-10-03"
+      },
+      "compare": [
+        {
+          "label": "Home",
+          "url": "https://www.moh.gov.gh/",
+          "real": {
+            "score": 17.5,
+            "grade": "F",
+            "checkedAt": "2026-10-03"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "The ministry",
+          "url": "https://moh.gov.gh/the-ministry/",
+          "real": {
+            "score": 98.5,
+            "grade": "A",
+            "checkedAt": "2026-10-03"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "Policy documents",
+          "url": "https://moh.gov.gh/policy-documents/",
+          "real": {
+            "score": 89.5,
+            "grade": "B",
+            "checkedAt": "2026-10-03"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        }
+      ]
     }
   }
 }

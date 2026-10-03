@@ -46,5 +46,29 @@
         "rebuild": "nia-gh/fees.html"
       }
     ]
+  },
+  {
+    "slug": "moh-gh",
+    "name": "Ministry of Health",
+    "country": "Ghana",
+    "site": "moh.gov.gh",
+    "note": "with section menus and a panel hero",
+    "compare": [
+      {
+        "label": "Home",
+        "real": "https://www.moh.gov.gh/",
+        "rebuild": "moh-gh/index.html"
+      },
+      {
+        "label": "The ministry",
+        "real": "https://moh.gov.gh/the-ministry/",
+        "rebuild": "moh-gh/about.html"
+      },
+      {
+        "label": "Policy documents",
+        "real": "https://moh.gov.gh/policy-documents/",
+        "rebuild": "moh-gh/publications/policy-documents.html"
+      }
+    ]
   }
 ]
