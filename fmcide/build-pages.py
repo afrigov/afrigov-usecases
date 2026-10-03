@@ -57,7 +57,7 @@ def shell(title, main, current=None, root="", extra_css="", breadcrumb=None):
       </div>
     </section>
 
-    <header class="ag-header">
+    <header class="ag-header ag-header--stacked">
       <div class="ag-container ag-header__inner">
         <a class="ag-header__brand" href="{r}index.html">
           <img class="ag-header__logo ag-header__logo--lg" src="{r}assets/mark.svg" alt="" width="56" height="56" />
