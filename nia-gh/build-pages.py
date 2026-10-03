@@ -1072,7 +1072,7 @@ def people(rows, variant=""):
     items = "".join(
         f'''
         <li class="ag-person">
-          <img class="ag-person__photo" src="{PORTRAIT}" alt="" width="{128 if variant else 320}" height="{128 if variant else 320}" loading="lazy" />
+          <img class="ag-person__photo" src="{PORTRAIT}" alt="" width="{128 if variant == "ag-people--rows" else 320}" height="{128 if variant == "ag-people--rows" else 320}" loading="lazy" />
           <div>
             <h3 class="ag-person__name">{name}</h3>
             <p class="ag-person__role">{role}</p>
@@ -1088,7 +1088,11 @@ P["board.html"] = shell("Board and management", f'''      <div class="ag-prose">
         <p class="ag-lead">The governing board sets the authority's direction. The management team runs it day to day. The portraits on the authority's site are not reproduced; grey frames stand where they go.</p>
         <h2 id="board">Governing board</h2>
       </div>
-{people(BOARD)}
+{people(BOARD[:2], "ag-people--2")}
+      <div class="ag-prose">
+        <h3>Members</h3>
+      </div>
+{people(BOARD[2:], "ag-people--4")}
       <div class="ag-prose">
         <h2 id="management">Management</h2>
       </div>

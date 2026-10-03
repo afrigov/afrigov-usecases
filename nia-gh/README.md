@@ -51,7 +51,7 @@ Every rebuilt page scores 100, A, on afrigov 0.9.0 from the CDN.
 | FAQs | `questions.html` | 37 of the 70 answers, in seven groups |
 | Scam alert | `scam-alert.html` | |
 | About, and the Executive Secretary's profile | `about.html` | Mandate, vision and mission, the identification system, the technical partner |
-| Governing board and management | `board.html` | People with portrait frames: a grid for the board, rows for management |
+| Governing board and management | `board.html` | People with portrait frames: the chairman and the Executive Secretary in two columns, the members in four, management as rows |
 | User agencies | `user-agencies.html` | The first 25 private institutions |
 | Registration statistics | `statistics.html` | Six figures as a table |
 | News | `news.html` | Eight headlines. One is rebuilt, the rest link to the real posts |
