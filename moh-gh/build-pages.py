@@ -214,14 +214,14 @@ PARTNERS = ["Department for International Development", "European Union Delegati
             "United Nations Population Fund", "UNICEF", "UNAIDS", "World Health Organization"]
 
 NEWS = [
-    ("news/free-primary-healthcare.html", "Free primary healthcare to begin in 150 districts", "News"),
-    (REAL + "health-ministry-engages-ga-mantse-on-fphc-launch/", "Ministry calls on the Ga Mantse ahead of the free primary healthcare launch", "News"),
-    (REAL + "government-moves-to-equip-health-facilities-for-free-primary-health-care-delivery-24534-pieces-of-equipment-procured/", "24,534 pieces of equipment procured for health facilities", "News"),
-    (REAL + "ministry-of-health-advances-cardiovascular-care-with-new-guidelines/", "New guidelines and donated equipment for cardiovascular care", "News"),
-    (REAL + "president-mahama-opens-66th-wacs-conference-calls-for-stronger-surgical-capacity-in-west-africa/", "President opens the 66th West African College of Surgeons conference", "News"),
-    (REAL + "health-ministry-to-sponsor-nurses-and-midwives-for-phd-training/", "Ministry to sponsor nurses and midwives for PhD training", "News"),
-    (REAL + "category/news/", "Africa's pharmaceutical manufacturing plan moves beyond paper", "News"),
-    (REAL + "category/news/", "Africa's health debate turns urgent in Accra", "News"),
+    ("news/free-primary-healthcare.html", "Free primary healthcare to begin in 150 districts", ""),
+    (REAL + "health-ministry-engages-ga-mantse-on-fphc-launch/", "Ministry calls on the Ga Mantse ahead of the free primary healthcare launch", ""),
+    (REAL + "government-moves-to-equip-health-facilities-for-free-primary-health-care-delivery-24534-pieces-of-equipment-procured/", "24,534 pieces of equipment procured for health facilities", ""),
+    (REAL + "ministry-of-health-advances-cardiovascular-care-with-new-guidelines/", "New guidelines and donated equipment for cardiovascular care", ""),
+    (REAL + "president-mahama-opens-66th-wacs-conference-calls-for-stronger-surgical-capacity-in-west-africa/", "President opens the 66th West African College of Surgeons conference", ""),
+    (REAL + "health-ministry-to-sponsor-nurses-and-midwives-for-phd-training/", "Ministry to sponsor nurses and midwives for PhD training", ""),
+    (REAL + "category/news/", "Africa's pharmaceutical manufacturing plan moves beyond paper", ""),
+    (REAL + "category/news/", "Africa's health debate turns urgent in Accra", ""),
 ]
 PRESS = [
     (REAL + "government-moves-to-equip-health-facilities-for-free-primary-health-care-delivery-24534-pieces-of-equipment-procured/", "24,534 pieces of equipment procured for free primary health care"),
@@ -472,11 +472,11 @@ def logo_cards(level="h3", root=""):
 
 
 def dated(rows, root=""):
+    """A dated list. An item with no date has no meta line; the real site gives none for news."""
     return "".join(
         f'''
         <li class="ag-list__item">
-          <a class="ag-list__link" href="{h if h.startswith("http") else root + h}">{t}</a>
-          <span class="ag-list__meta">{m}</span>
+          <a class="ag-list__link" href="{h if h.startswith("http") else root + h}">{t}</a>{f'<span class="ag-list__meta">{m}</span>' if m else ""}
         </li>'''
         for h, t, m in rows
     )
@@ -790,7 +790,7 @@ P["press-releases.html"] = shell("Press releases", f'''      <div class="ag-pros
         <h1 class="ag-heading-xl">Press releases</h1>
         <p class="ag-lead">Statements issued by the ministry. Each link opens the statement on the ministry's site.</p>
       </div>
-      <ul class="ag-list">{dated([(r[0], r[1], r[2] if len(r) > 2 else "Press release") for r in PRESS])}
+      <ul class="ag-list">{dated([(r[0], r[1], r[2] if len(r) > 2 else "") for r in PRESS])}
       </ul>
       <nav aria-label="Pagination">
         <ul class="ag-pagination ag-pagination--simple">
