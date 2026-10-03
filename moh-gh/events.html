@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Events – Ministry of Health</title>
-    <meta name="description" content="Summits, launches and briefings run or hosted by the ministry. The ministry&#x27;s site lists them without dates." />
+    <meta name="description" content="Summits, launches and briefings run or hosted by the ministry, most recent first." />
     <!-- An unofficial rebuild stays out of search results, so it never competes with the ministry's own site. -->
     <meta name="robots" content="noindex" />
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.10/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.10/dist/gh.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.11/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.11/dist/gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -136,45 +136,76 @@
       <nav aria-label="Breadcrumb"><ol class="ag-breadcrumb"><li><a href="index.html">Home</a></li><li><span aria-current="page">Events</span></li></ol></nav>
       <div class="ag-prose">
         <h1 class="ag-heading-xl">Events</h1>
-        <p class="ag-lead">Summits, launches and briefings run or hosted by the ministry. The ministry's site lists them without dates.</p>
+        <p class="ag-lead">Summits, launches and briefings run or hosted by the ministry, most recent first.</p>
+        <div class="ag-inset"><p>The ministry's site posts each event as a picture of its flyer, with no date in the text. The dates here were read from the flyers. Where a flyer gives no date, the block says so.</p></div>
       </div>
-      <ul class="ag-list">
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/african-union-extraordinary-summit-on-health/">African Union Extraordinary Summit on Health</a>
-          <span class="ag-list__meta">Event</span>
+      <ul class="ag-events">
+        <li class="ag-event ag-event--past">
+          <time class="ag-event__date" datetime="2026-07-21"><span class="ag-event__day">21</span><span class="ag-event__month">Jul</span></time>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="events/au-summit.html">African Union Extraordinary Summit on Health</a></h3>
+            <p class="ag-event__meta">21 and 22 July 2026, Accra, past event</p>
+            <p class="ag-event__text">Ending AIDS and TB, improving maternal health, and tackling endemic non-communicable and neglected tropical diseases in Africa.</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/launch-of-free-primary-healthcare/">Launch of free primary healthcare</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event">
+          <span class="ag-event__date ag-event__date--tbc">TBC<span class="ag-visually-hidden">, date to be confirmed</span></span>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/launch-of-free-primary-healthcare/">Launch of free primary healthcare</a></h3>
+            <p class="ag-event__meta">Date not given on the ministry's site</p>
+            <p class="ag-event__text">Removing the financial barrier to care, towards universal health coverage.</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/media-engagement-on-free-primary-healthcare/">Media engagement on free primary healthcare</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event ag-event--past">
+          <time class="ag-event__date" datetime="2026-04-13T11:00"><span class="ag-event__day">13</span><span class="ag-event__month">Apr</span></time>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/media-engagement-on-free-primary-healthcare/">Media engagement on free primary healthcare</a></h3>
+            <p class="ag-event__meta">Monday 13 April 2026, 11am, past event</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/government-accountability-series-with-minister-for-health/">Government accountability series with the Minister for Health</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event">
+          <span class="ag-event__date ag-event__date--tbc">TBC<span class="ag-visually-hidden">, date to be confirmed</span></span>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/government-accountability-series-with-minister-for-health/">Government accountability series with the Minister for Health</a></h3>
+            <p class="ag-event__meta">A Friday at 11am; the date is not given on the ministry's site</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/launch-of-ghana-medical-trust-fund/">Launch of the Ghana Medical Trust Fund</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event">
+          <span class="ag-event__date ag-event__date--tbc">TBC<span class="ag-visually-hidden">, date to be confirmed</span></span>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/launch-of-ghana-medical-trust-fund/">Launch of the Ghana Medical Trust Fund</a></h3>
+            <p class="ag-event__meta">Date not given on the ministry's site</p>
+            <p class="ag-event__text">A new era in chronic disease care, launched by the President and the Minister.</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/5863-2/">National policy dialogue on the health workforce</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event ag-event--past">
+          <time class="ag-event__date" datetime="2025-04-09"><span class="ag-event__day">9</span><span class="ag-event__month">Apr</span></time>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/5863-2/">National policy dialogue on the health workforce</a></h3>
+            <p class="ag-event__meta">9 and 10 April 2025, past event</p>
+            <p class="ag-event__text">Transforming Ghana's health workforce for universal health coverage: align, invest and sustain.</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/launch-of-mahamacares-taskforce/">Launch of the MahamaCares taskforce</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event ag-event--past">
+          <time class="ag-event__date" datetime="2025-03-12"><span class="ag-event__day">12</span><span class="ag-event__month">Mar</span></time>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/launch-of-mahamacares-taskforce/">Inauguration of the MahamaCares taskforce</a></h3>
+            <p class="ag-event__meta">Wednesday 12 March 2025, Ministry of Health auditorium, past event</p>
+            <p class="ag-event__text">The taskforce that put the Ghana Medical Care Trust Fund into operation.</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/national-prostate-cancer-dialogue-2024/">National Prostate Cancer Dialogue 2024</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event ag-event--past">
+          <time class="ag-event__date" datetime="2024-10-02T09:00"><span class="ag-event__day">2</span><span class="ag-event__month">Oct</span></time>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/national-prostate-cancer-dialogue-2024/">National Prostate Cancer Dialogue 2024</a></h3>
+            <p class="ag-event__meta">2 October 2024, 9am, Alisa Hotel, North Ridge, Accra, past event</p>
+            <p class="ag-event__text">Bridging the gap in prostate cancer care in Ghana, with the Ghana Association of Urological Surgeons and GIZ.</p>
+          </div>
         </li>
       </ul>
     </main>
 
-    <footer class="ag-footer">
+    <footer class="ag-footer ag-footer--striped">
       <div class="ag-container">
         <div class="ag-footer__columns">
           <div>
@@ -225,6 +256,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.10/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.11/dist/afrigov.iife.js"></script>
   </body>
 </html>

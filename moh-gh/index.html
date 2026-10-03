@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.10/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.10/dist/gh.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.11/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.11/dist/gh.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -276,19 +276,19 @@
 
         <h2>Programmes</h2>
       <ul class="ag-cards">
-        <li class="ag-card">
+        <li class="ag-card ag-card--flag">
           <h3 class="ag-card__title"><a class="ag-card__link" href="programmes/nutrition-malaria.html">Nutrition and Malaria Control for Child Survival</a></h3>
           <p class="ag-card__text">Improving the use of community-based health and nutrition services for children under two and pregnant women in selected districts.</p>
         </li>
-        <li class="ag-card">
+        <li class="ag-card ag-card--flag">
           <h3 class="ag-card__title"><a class="ag-card__link" href="programmes/maf.html">Millennium Accelerated Framework</a></h3>
           <p class="ag-card__text">Reducing maternal and newborn deaths through proven, affordable interventions in communities and health facilities.</p>
         </li>
-        <li class="ag-card">
+        <li class="ag-card ag-card--flag">
           <h3 class="ag-card__title"><a class="ag-card__link" href="programmes/climate-change.html">Climate Change Health Project</a></h3>
           <p class="ag-card__text">A national strategy for bringing climate change risks into health sector policies, piloted in three districts.</p>
         </li>
-        <li class="ag-card">
+        <li class="ag-card ag-card--flag">
           <h3 class="ag-card__title"><a class="ag-card__link" href="programmes/regenerative-health.html">Regenerative Health and Nutrition</a></h3>
           <p class="ag-card__text">A preventive programme for healthy lifestyles that strengthen the body and mind and prevent disease.</p>
         </li>
@@ -297,25 +297,32 @@
 
       <div class="ag-band ag-band--primary">
         <div class="ag-container">
-          <h2 class="ag-mt-0">Upcoming events</h2>
-          <ul class="ag-list">
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/african-union-extraordinary-summit-on-health/">African Union Extraordinary Summit on Health</a>
-          <span class="ag-list__meta">Event</span>
+          <h2 class="ag-mt-0">Events</h2>
+      <ul class="ag-events">
+        <li class="ag-event ag-event--past">
+          <time class="ag-event__date" datetime="2026-07-21"><span class="ag-event__day">21</span><span class="ag-event__month">Jul</span></time>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="events/au-summit.html">African Union Extraordinary Summit on Health</a></h3>
+            <p class="ag-event__meta">21 and 22 July 2026, Accra, past event</p>
+            <p class="ag-event__text">Ending AIDS and TB, improving maternal health, and tackling endemic non-communicable and neglected tropical diseases in Africa.</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/launch-of-free-primary-healthcare/">Launch of free primary healthcare</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event">
+          <span class="ag-event__date ag-event__date--tbc">TBC<span class="ag-visually-hidden">, date to be confirmed</span></span>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/launch-of-free-primary-healthcare/">Launch of free primary healthcare</a></h3>
+            <p class="ag-event__meta">Date not given on the ministry's site</p>
+            <p class="ag-event__text">Removing the financial barrier to care, towards universal health coverage.</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/media-engagement-on-free-primary-healthcare/">Media engagement on free primary healthcare</a>
-          <span class="ag-list__meta">Event</span>
+        <li class="ag-event ag-event--past">
+          <time class="ag-event__date" datetime="2026-04-13T11:00"><span class="ag-event__day">13</span><span class="ag-event__month">Apr</span></time>
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="https://moh.gov.gh/media-engagement-on-free-primary-healthcare/">Media engagement on free primary healthcare</a></h3>
+            <p class="ag-event__meta">Monday 13 April 2026, 11am, past event</p>
+          </div>
         </li>
-        <li class="ag-list__item">
-          <a class="ag-list__link" href="https://moh.gov.gh/government-accountability-series-with-minister-for-health/">Government accountability series with the Minister for Health</a>
-          <span class="ag-list__meta">Event</span>
-        </li>
-          </ul>
+      </ul>
           <p class="ag-mb-0"><a href="events.html">All events</a></p>
         </div>
       </div>
@@ -332,7 +339,7 @@
       </div>
     </main>
 
-    <footer class="ag-footer">
+    <footer class="ag-footer ag-footer--striped">
       <div class="ag-container">
         <div class="ag-footer__columns">
           <div>
@@ -383,6 +390,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.10/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.11/dist/afrigov.iife.js"></script>
   </body>
 </html>

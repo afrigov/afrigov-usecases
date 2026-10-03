@@ -6,7 +6,7 @@ It is not the ministry's website and says so on every page.
 
 ## Why this site
 
-The first use case was a ministry in Nigeria, the second a service agency in Ghana. This is a ministry in Ghana, so the two Ghanaian rebuilds share a country pack and nothing else: the agency has a green header, a tinted hero and a light footer; the ministry has a white header with the flag stripe, a photograph with the title in a panel over it, and the dark footer.
+The first use case was a ministry in Nigeria, the second a service agency in Ghana. This is a ministry in Ghana, so the two Ghanaian rebuilds share a country pack and nothing else: the agency has a green header, a tinted hero and a light footer; the ministry has a white header with the flag stripe, a photograph with the title in a panel over it, the flag on its programme cards, and the dark footer with the stripe along its top.
 
 The real site keeps its 37 pages behind six dropdown menus and opens with a photo slider. Those two things are what most government sites do, and afrigov had neither until this rebuild asked for them.
 
@@ -22,7 +22,7 @@ Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.2.0 on 
 
 The real site's inner pages are nearly fine. Its home page is where the slider, the carousel and the widgets are.
 
-Every rebuilt page scores 100, A, on afrigov 0.10.1 from the CDN.
+Every rebuilt page scores 100, A, on afrigov 0.11 from the CDN.
 
 ## Rules
 
@@ -38,22 +38,22 @@ Every rebuilt page scores 100, A, on afrigov 0.10.1 from the CDN.
 
 | Real pages | Rebuilt | Notes |
 | --- | --- | --- |
-| Home | `index.html` | Panel hero on the free primary healthcare campaign, what the ministry does, news, leadership with portrait frames, the twelve agencies with logos, programmes, events on a green band, latest publications |
+| Home | `index.html` | Panel hero on the free primary healthcare campaign, what the ministry does, news, leadership with portrait frames, the twelve agencies with logos, programmes with the flag edge, events with date blocks on a green band, latest publications |
 | About us, 4 pages | `about.html`, `chief-director.html`, `organogram.html`, `partners.html` | The organogram, one picture on the real site, is a text structure here |
 | Agencies | `agencies.html` | Twelve logo cards |
 | Directorates, 10 pages | `directorates.html` and `directorates/*.html` | An index, and one page per directorate with its units as a summary list |
 | Publications, 9 categories | `publications.html` and `publications/*.html` | Download tables with name and year. The largest categories show their most recent twelve and link to the rest |
 | Programmes, 4 pages | `programmes.html` and `programmes/*.html` | |
-| Media, 5 pages | `news.html`, `news/free-primary-healthcare.html`, `press-releases.html`, `events.html`, `gallery.html`, `videos.html` | The gallery and video pages are empty on the real site, so they are empty states |
+| Media, 5 pages | `news.html`, `news/free-primary-healthcare.html`, `press-releases.html`, `events.html`, `events/au-summit.html`, `gallery.html`, `videos.html` | Events carry date blocks, with the dates read from the flyers. One event has its own page. The gallery and video pages are empty on the real site, so they are empty states |
 | Tenders | `tenders.html` | An empty state: the newest notices are from 2017 |
 | Contact us, useful links | `contact.html`, `contact-sent.html`, `useful-links.html` | |
 
-42 pages. The real site's single news articles, agency pages and the QualityRights project page are not rebuilt; the lists link to them.
+43 pages. The real site's single news articles, agency pages and the QualityRights project page are not rebuilt; the lists link to them.
 
 ## Things about the real site worth knowing
 
 - The site's firewall blocks visitors it takes for automated after a few dozen requests. Three pages and every article came back as a block page on the first pass; the texts were taken on a second pass at a slower rate.
-- News, press releases and events are listed without dates. The lists here say what each item is instead.
+- News and press releases are listed without dates, and each event is a picture of its flyer with no text. The dates on the events page were read from the flyers; three flyers give none.
 - Headlines on the home page are typed in bold mathematical symbols, which screen readers read letter by letter or skip. They are plain text here.
 - 33 of the 35 images on the home page have no description.
 - The footer reads "0 Fans, 0 Followers", and a box of health posts dates from 2017.
@@ -63,6 +63,6 @@ Every rebuilt page scores 100, A, on afrigov 0.10.1 from the CDN.
 ## Run it
 
 ```sh
-python3 build-pages.py                                   # writes the 42 pages
+python3 build-pages.py                                   # writes the 43 pages
 AFRIGOV_CDN=http://localhost:8080/dist/ python3 build-pages.py   # against a local afrigov
 ```

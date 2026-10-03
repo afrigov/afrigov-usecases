@@ -2,7 +2,7 @@
 import os, html, re, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.10/dist/")
+CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.11/dist/")
 REAL = "https://moh.gov.gh/"
 UP = REAL + "wp-content/uploads/"
 ORG = "Ministry of Health"
@@ -233,16 +233,40 @@ PRESS = [
     (REAL + "transport-services-for-health-workers/", "Transport services for health workers"),
     (REAL + "press-release-update-on-covid-19/", "Update on coronavirus disease, COVID-19"),
 ]
+# (title, link, ISO date or None, day, month, meta line, one line about it). Dates come from the
+# flyers the real site posts as pictures; where a flyer gives none, the block says so.
 EVENTS = [
-    ("African Union Extraordinary Summit on Health", "african-union-extraordinary-summit-on-health"),
-    ("Launch of free primary healthcare", "launch-of-free-primary-healthcare"),
-    ("Media engagement on free primary healthcare", "media-engagement-on-free-primary-healthcare"),
-    ("Government accountability series with the Minister for Health", "government-accountability-series-with-minister-for-health"),
-    ("Launch of the Ghana Medical Trust Fund", "launch-of-ghana-medical-trust-fund"),
-    ("National policy dialogue on the health workforce", "5863-2"),
-    ("Launch of the MahamaCares taskforce", "launch-of-mahamacares-taskforce"),
-    ("National Prostate Cancer Dialogue 2024", "national-prostate-cancer-dialogue-2024"),
+    ("African Union Extraordinary Summit on Health", "events/au-summit.html", "2026-07-21", "21", "Jul", "21 and 22 July 2026, Accra", "Ending AIDS and TB, improving maternal health, and tackling endemic non-communicable and neglected tropical diseases in Africa."),
+    ("Launch of free primary healthcare", REAL + "launch-of-free-primary-healthcare/", None, "", "", "Date not given on the ministry's site", "Removing the financial barrier to care, towards universal health coverage."),
+    ("Media engagement on free primary healthcare", REAL + "media-engagement-on-free-primary-healthcare/", "2026-04-13T11:00", "13", "Apr", "Monday 13 April 2026, 11am", ""),
+    ("Government accountability series with the Minister for Health", REAL + "government-accountability-series-with-minister-for-health/", None, "", "", "A Friday at 11am; the date is not given on the ministry's site", ""),
+    ("Launch of the Ghana Medical Trust Fund", REAL + "launch-of-ghana-medical-trust-fund/", None, "", "", "Date not given on the ministry's site", "A new era in chronic disease care, launched by the President and the Minister."),
+    ("National policy dialogue on the health workforce", REAL + "5863-2/", "2025-04-09", "9", "Apr", "9 and 10 April 2025", "Transforming Ghana's health workforce for universal health coverage: align, invest and sustain."),
+    ("Inauguration of the MahamaCares taskforce", REAL + "launch-of-mahamacares-taskforce/", "2025-03-12", "12", "Mar", "Wednesday 12 March 2025, Ministry of Health auditorium", "The taskforce that put the Ghana Medical Care Trust Fund into operation."),
+    ("National Prostate Cancer Dialogue 2024", REAL + "national-prostate-cancer-dialogue-2024/", "2024-10-02T09:00", "2", "Oct", "2 October 2024, 9am, Alisa Hotel, North Ridge, Accra", "Bridging the gap in prostate cancer care in Ghana, with the Ghana Association of Urological Surgeons and GIZ."),
 ]
+TODAY = "2026-10-03"
+
+
+def events_html(rows, root=""):
+    out = ""
+    for title, link, iso, day, month, meta, text in rows:
+        href = link if link.startswith("http") else root + link
+        past = bool(iso) and iso[:10] < TODAY
+        if iso:
+            block = f'<time class="ag-event__date" datetime="{iso}"><span class="ag-event__day">{day}</span><span class="ag-event__month">{month}</span></time>'
+        else:
+            block = '<span class="ag-event__date ag-event__date--tbc">TBC<span class="ag-visually-hidden">, date to be confirmed</span></span>'
+        line = f'\n            <p class="ag-event__text">{text}</p>' if text else ""
+        out += f'''
+        <li class="ag-event{" ag-event--past" if past else ""}">
+          {block}
+          <div class="ag-event__body">
+            <h3 class="ag-event__title"><a href="{href}">{title}</a></h3>
+            <p class="ag-event__meta">{meta}{", past event" if past else ""}</p>{line}
+          </div>
+        </li>'''
+    return f'      <ul class="ag-events">{out}\n      </ul>'
 PROJECTS = [
     ("Upgraded cardiac centre commissioned under the trust fund", "A newly built cardiac catheterisation laboratory, commissioned by the President."),
     ("Seven district hospitals, including Dodowa, Sekondi, Fomena and Garu-Tempane", "Design, construction and equipping of seven district hospitals with integrated IT systems."),
@@ -358,7 +382,7 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False):
 {crumb}{main}
     </main>
 
-    <footer class="ag-footer">
+    <footer class="ag-footer ag-footer--striped">
       <div class="ag-container">
         <div class="ag-footer__columns">
           <div>
@@ -530,14 +554,13 @@ P["index.html"] = shell(ORG, f'''      <div class="ag-hero ag-hero--cover">
 {logo_cards()}
 
         <h2>Programmes</h2>
-{cards([(name, short, f"programmes/{slug}.html", None) for slug, name, short, _ in PROGRAMMES], level="h3")}
+{cards([(name, short, f"programmes/{slug}.html", None) for slug, name, short, _ in PROGRAMMES], level="h3", variant="ag-card--flag")}
       </div>
 
       <div class="ag-band ag-band--primary">
         <div class="ag-container">
-          <h2 class="ag-mt-0">Upcoming events</h2>
-          <ul class="ag-list">{dated([(f"{REAL}{slug}/", title, "Event") for title, slug in EVENTS[:4]])}
-          </ul>
+          <h2 class="ag-mt-0">Events</h2>
+{events_html(EVENTS[:3])}
           <p class="ag-mb-0"><a href="events.html">All events</a></p>
         </div>
       </div>
@@ -720,7 +743,7 @@ P["programmes.html"] = shell("Programmes", f'''      <div class="ag-prose">
         <h1 class="ag-heading-xl">Programmes</h1>
         <p class="ag-lead">The ministry's programmes and projects for child survival, maternal health, climate and health, and healthy living.</p>
       </div>
-{cards([(name, short, f"programmes/{slug}.html", None) for slug, name, short, _ in PROGRAMMES], level="h2")}
+{cards([(name, short, f"programmes/{slug}.html", None) for slug, name, short, _ in PROGRAMMES], level="h2", variant="ag-card--flag")}
       <div class="ag-prose">
         <p>The ministry's site also carries updates on the <a href="{REAL}qualityrights-in-mental-health-ghana-project/">QualityRights in Mental Health project</a>, a three-year effort to roll out mental health services that respect people's rights.</p>
       </div>''', current="Programmes", breadcrumb=crumbs(("programmes.html", "Programmes")))
@@ -777,10 +800,39 @@ P["press-releases.html"] = shell("Press releases", f'''      <div class="ag-pros
 
 P["events.html"] = shell("Events", f'''      <div class="ag-prose">
         <h1 class="ag-heading-xl">Events</h1>
-        <p class="ag-lead">Summits, launches and briefings run or hosted by the ministry. The ministry's site lists them without dates.</p>
+        <p class="ag-lead">Summits, launches and briefings run or hosted by the ministry, most recent first.</p>
+        <div class="ag-inset"><p>The ministry's site posts each event as a picture of its flyer, with no date in the text. The dates here were read from the flyers. Where a flyer gives no date, the block says so.</p></div>
       </div>
-      <ul class="ag-list">{dated([(f"{REAL}{slug}/", title, "Event") for title, slug in EVENTS])}
-      </ul>''', current="Media", breadcrumb=crumbs(("events.html", "Events")))
+{events_html(EVENTS)}''', current="Media", breadcrumb=crumbs(("events.html", "Events")))
+
+P["events/au-summit.html"] = shell("African Union Extraordinary Summit on Health", f'''      <div class="ag-event">
+        <time class="ag-event__date ag-event__date--lg" datetime="2026-07-21"><span class="ag-event__day">21</span><span class="ag-event__month">Jul</span></time>
+        <div class="ag-event__body">
+          <p class="ag-caption">Event, past</p>
+          <h1 class="ag-heading-xl">African Union Extraordinary Summit on Health</h1>
+          <p class="ag-lead">Heads of state and ministers met in Accra on ending AIDS and TB, improving maternal health, and tackling endemic non-communicable and neglected tropical diseases in Africa.</p>
+        </div>
+      </div>
+      <dl class="ag-summary">
+        <div class="ag-summary__row"><dt class="ag-summary__key">When</dt><dd class="ag-summary__value">21 and 22 July 2026</dd></div>
+        <div class="ag-summary__row"><dt class="ag-summary__key">Where</dt><dd class="ag-summary__value">Accra, Ghana</dd></div>
+        <div class="ag-summary__row"><dt class="ag-summary__key">Host</dt><dd class="ag-summary__value">The Government of Ghana, with the African Union</dd></div>
+        <div class="ag-summary__row"><dt class="ag-summary__key">Who it was for</dt><dd class="ag-summary__value">Heads of state, health ministers and partners from African Union member states</dd></div>
+      </dl>
+      <div class="ag-prose">
+        <h2>What it covered</h2>
+        <ul>
+          <li>Ending AIDS and tuberculosis</li>
+          <li>Improving maternal health</li>
+          <li>Endemic non-communicable diseases</li>
+          <li>Neglected tropical diseases and conditions</li>
+        </ul>
+        <p>The ministry's news from the summit: <a href="../news.html">Africa's health debate turns urgent in Accra</a>, and the President's call to move Africa's pharmaceutical manufacturing plan beyond paper.</p>
+        <div class="ag-inset"><p>This page is built from the summit's flyer on the ministry's site, which gives the dates, the place and the theme. The real page is <a href="{REAL}african-union-extraordinary-summit-on-health/">on moh.gov.gh</a>.</p></div>
+        <h2>Questions</h2>
+        <p>Email <a href="mailto:info@moh.gov.gh">info@moh.gov.gh</a> or call <a href="tel:+233302665651">+233 302 665 651</a>, Monday to Friday.</p>
+        <p><a href="../events.html">All events</a></p>
+      </div>''', current="Media", root="../", breadcrumb=crumbs(("events.html", "Events"), ("events/au-summit.html", "African Union summit")))
 
 P["gallery.html"] = shell("Gallery of projects", f'''      <div class="ag-prose">
         <h1 class="ag-heading-xl">Gallery of projects</h1>
