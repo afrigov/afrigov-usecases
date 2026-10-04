@@ -53,8 +53,9 @@ Every rebuilt page scores 100, A, on afrigov 0.13 from the CDN. The rebuilt home
 | Agencies | `agencies.html` | Seventeen cards |
 | Resources | `resources.html` | Five documents with their type and size |
 | Contact | `contact.html`, `contact-sent.html` | |
+| Search, in the header of every page | `search.html` | Added with afrigov 0.14. The real site's search form is its one critical accessibility error. Results come from a Pagefind index of the other pages, built with the site; there is no server |
 
-41 pages.
+42 pages.
 
 ## Things about the real site worth knowing
 
@@ -74,6 +75,7 @@ Every rebuilt page scores 100, A, on afrigov 0.13 from the CDN. The rebuilt home
 ## Run it
 
 ```sh
-python3 build-pages.py                                   # writes the 41 pages
+python3 build-pages.py                                   # writes the 42 pages
+npx pagefind@1.5.2 --site .                              # builds the search index in pagefind/
 AFRIGOV_CDN=http://localhost:8080/dist/ python3 build-pages.py   # against a local afrigov
 ```

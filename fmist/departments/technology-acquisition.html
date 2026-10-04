@@ -15,8 +15,8 @@
         if (!window.AfriGov) document.documentElement.classList.remove("ag-js");
       });
     </script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.13.2/dist/core.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.13.2/dist/ng.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.14.0/dist/core.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/afrigov@0.14.0/dist/ng.min.css" />
   </head>
   <body>
     <a class="ag-skip-link" href="#main">Skip to main content</a>
@@ -42,6 +42,20 @@
             <span class="ag-header__sub">Federal Ministry, Nigeria</span>
           </span>
         </a>
+        <details class="ag-header__search" data-ag-menu>
+          <summary class="ag-header__search-toggle"><span class="ag-search__icon" aria-hidden="true"></span><span class="ag-visually-hidden">Search</span></summary>
+          <div class="ag-header__search-panel">
+            <div class="ag-container">
+              <form class="ag-search" role="search" action="../search.html" method="get">
+                <label class="ag-search__label" for="header-q">Search this site</label>
+                <div class="ag-search__row">
+                  <input class="ag-search__input" type="search" id="header-q" name="q" />
+                  <button class="ag-search__button" type="submit"><span class="ag-search__icon" aria-hidden="true"></span>Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </details>
         <button class="ag-header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-ag-toggle>Menu</button>
         <nav class="ag-header__nav" id="nav" aria-label="Main">
           <ul class="ag-nav">
@@ -84,7 +98,7 @@
       </div>
     </header>
 
-    <main class="ag-main ag-container" id="main" tabindex="-1">
+    <main class="ag-main ag-container" id="main" tabindex="-1" data-pagefind-body>
       <nav aria-label="Breadcrumb"><ol class="ag-breadcrumb"><li><a href="../index.html">Home</a></li><li><a href="../departments.html">Departments and units</a></li><li><span aria-current="page">Technology Acquisition and Adaptation</span></li></ol></nav>
       <div class="ag-prose">
         <p class="ag-caption">Department · TAA</p>
@@ -166,6 +180,6 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.13.2/dist/afrigov.iife.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/afrigov@0.14.0/dist/afrigov.iife.js"></script>
   </body>
 </html>

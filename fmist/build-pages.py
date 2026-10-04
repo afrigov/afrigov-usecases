@@ -2,7 +2,7 @@
 import os, html, re, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.13.2/dist/")
+CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.14.0/dist/")
 REAL = "https://scienceandtech.gov.ng/"
 UP = REAL + "wp-content/uploads/"
 ORG = "Federal Ministry of Innovation, Science and Technology"
@@ -340,7 +340,7 @@ def nav_html(current, root):
     return "\n".join(out)
 
 
-def shell(title, main, current=None, root="", breadcrumb=None, wide=False):
+def shell(title, main, current=None, root="", breadcrumb=None, wide=False, index=True):
     page_title = ORG if title == ORG else f"{title} – {ORG}"
     description = html.escape(describe(title, main), quote=True)
     r = root
@@ -398,6 +398,20 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False):
             <span class="ag-header__sub">Federal Ministry, Nigeria</span>
           </span>
         </a>
+        <details class="ag-header__search" data-ag-menu>
+          <summary class="ag-header__search-toggle"><span class="ag-search__icon" aria-hidden="true"></span><span class="ag-visually-hidden">Search</span></summary>
+          <div class="ag-header__search-panel">
+            <div class="ag-container">
+              <form class="ag-search" role="search" action="{r}search.html" method="get">
+                <label class="ag-search__label" for="header-q">Search this site</label>
+                <div class="ag-search__row">
+                  <input class="ag-search__input" type="search" id="header-q" name="q" />
+                  <button class="ag-search__button" type="submit"><span class="ag-search__icon" aria-hidden="true"></span>Search</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </details>
         <button class="ag-header__toggle" type="button" aria-expanded="false" aria-controls="nav" data-ag-toggle>Menu</button>
         <nav class="ag-header__nav" id="nav" aria-label="Main">
           <ul class="ag-nav">
@@ -407,7 +421,7 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False):
       </div>
     </header>
 
-    <main class="{main_class}" id="main" tabindex="-1">
+    <main class="{main_class}" id="main" tabindex="-1"{" data-pagefind-body" if index else ""}>
 {crumb}{main}
     </main>
 
@@ -1027,8 +1041,60 @@ P["contact.html"] = shell("Contact the ministry", f'''      <div class="ag-prose
         <div class="ag-summary__row"><dt class="ag-summary__key">Visit</dt><dd class="ag-summary__value">Federal Secretariat Complex Phase II, Block D, 4th to 8th Floor, Shehu Shagari Way, Abuja, FCT</dd></div>
       </dl>''', current="Contact", breadcrumb=crumbs(("contact.html", "Contact")))
 
+# ---------------------------------------------------------------- search
+
+# The results come from Pagefind: `npx pagefind --site .` after this script writes the pages builds a
+# small index in pagefind/, and this page asks it in the browser. There is no server to run.
+WHERE = {"departments": "Departments", "programs": "Programs", "news": "News", "events": "Events", "videos": "Videos"}
+P["search.html"] = shell("Search", f'''      <h1 class="ag-heading-xl">Search</h1>
+      <form class="ag-search ag-search--lg" role="search" action="search.html" method="get">
+        <label class="ag-search__label ag-visually-hidden" for="q">Search this site</label>
+        <div class="ag-search__row">
+          <input class="ag-search__input" type="search" id="q" name="q" />
+          <button class="ag-search__button" type="submit"><span class="ag-search__icon" aria-hidden="true"></span>Search</button>
+        </div>
+      </form>
+      <p class="ag-results__count" id="count" role="status"></p>
+      <ol class="ag-results" id="results" hidden></ol>
+      <div class="ag-empty" id="none" hidden>
+        <h2 class="ag-empty__title">Try another way</h2>
+        <ul>
+          <li>Check the spelling, or use fewer words.</li>
+          <li>Start from the <a href="services.html">services</a>, the <a href="departments.html">departments</a> or the <a href="programs.html">programs</a>.</li>
+          <li><a href="contact.html">Contact the ministry</a>.</li>
+        </ul>
+      </div>
+      <noscript><p>Search needs JavaScript in this browser. Start from the <a href="services.html">services</a>, the <a href="departments.html">departments</a> or the <a href="programs.html">programs</a>.</p></noscript>
+      <script type="module">
+        const where = {json.dumps(WHERE)};
+        const text = (s) => s.replace(/[&<>"]/g, (c) => ({{ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }})[c]);
+        const q = (new URLSearchParams(location.search).get("q") || "").trim();
+        const count = document.getElementById("count");
+        const list = document.getElementById("results");
+        document.getElementById("q").value = q;
+        if (q) {{
+          count.textContent = "Searching…";
+          const pagefind = await import("./pagefind/pagefind.js");
+          const found = await pagefind.search(q);
+          const shown = await Promise.all(found.results.slice(0, 10).map((r) => r.data()));
+          const n = found.results.length;
+          count.innerHTML = n
+            ? `${{n}} ${{n === 1 ? "result" : "results"}} for <strong>${{text(q)}}</strong>${{n > 10 ? ", the first 10 shown" : ""}}`
+            : `No results for <strong>${{text(q)}}</strong>`;
+          document.getElementById("none").hidden = n > 0;
+          list.hidden = n === 0;
+          list.innerHTML = shown
+            .map((r) => {{
+              const path = new URL(r.url, location.href).pathname.split("/").filter(Boolean);
+              const section = where[path[path.length - 2]] || "The ministry";
+              return `<li class="ag-result"><h2 class="ag-result__title"><a href="${{r.url}}">${{text(r.meta.title.replace(/ – .*$/, ""))}}</a></h2><p class="ag-result__where">${{section}}</p><p class="ag-result__text">${{r.excerpt}}</p></li>`;
+            }})
+            .join("");
+        }}
+      </script>''', current=None, breadcrumb=crumbs(("search.html", "Search")), index=False)
+
 P["contact-sent.html"] = shell("Message not sent", f'''      <div class="ag-panel ag-panel--neutral"><h1 class="ag-panel__title">This is where a message would be sent</h1><p class="ag-panel__body">Nothing was sent, because this is an unofficial rebuild.</p></div>
-      <div class="ag-prose"><p>On a real service this page confirms the message and gives a reference. To reach the ministry, use <a href="{REAL}contact/">scienceandtech.gov.ng</a>.</p><p><a href="index.html">Return to the home page</a></p></div>''')
+      <div class="ag-prose"><p>On a real service this page confirms the message and gives a reference. To reach the ministry, use <a href="{REAL}contact/">scienceandtech.gov.ng</a>.</p><p><a href="index.html">Return to the home page</a></p></div>''', index=False)
 
 for path, content in P.items():
     write(path, content)

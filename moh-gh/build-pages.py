@@ -2,7 +2,7 @@
 import os, html, re, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.13.2/dist/")
+CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.14.0/dist/")
 REAL = "https://moh.gov.gh/"
 UP = REAL + "wp-content/uploads/"
 ORG = "Ministry of Health"

@@ -16,6 +16,7 @@ What was missing, what broke, and what felt wrong when afrigov met a fourth gove
 | 10 | Management | Two leaders, then 18 directors | `ag-people--2` and `ag-people--4` | Worked. The two leaders sit at the four-column size, centred, as agreed in the third rebuild | |
 | 11 | Resources | File sizes | The download link's meta | The real site gives none. The sizes here come from the ministry's server, so the 21 MB roadmap carries a warning | |
 | 12 | Gallery | A gallery with nothing in it | The empty state | Worked | |
+| 13 | Header, every page | Search. The real site has a search form in its header, and it is its one critical accessibility error | Nothing: afrigov had a pattern about search engines, but no search box | **Built in 0.14.0:** `ag-search`, the header search button, and the site search results pattern. Here the results come from a Pagefind index of the 40 content pages, built with the site, so there is no server. A search transfers about 73 KB, the header stays on one row at 1024px, and the results page scores 100 | |
 
 Two things are open in afrigov from this rebuild, findings 1 and 2.
 

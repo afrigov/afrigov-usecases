@@ -1,6 +1,6 @@
 # Generates the rebuilt pages from one shell. Run: python3 build-pages.py
 import os, html, re
-CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.13.2/dist/")
+CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.14.0/dist/")
 NAV = [("index.html","Home"),("about.html","About"),("initiatives.html","Initiatives"),("media.html","Media"),("ict-hubs.html","ICT Hubs"),("project-bridge.html","Project BRIDGE"),("pebec.html","PEBEC")]
 
 ORG = "Federal Ministry of Communications, Innovation and Digital Economy"
