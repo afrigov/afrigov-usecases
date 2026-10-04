@@ -1,0 +1,430 @@
+{
+  "url": "https://scienceandtech.gov.ng/management/",
+  "finalUrl": "https://scienceandtech.gov.ng/management/",
+  "checkedAt": "2026-10-04T02:43:10.667Z",
+  "tool": {
+    "name": "afrigov-audit",
+    "version": "0.3.0",
+    "axeVersion": "4.13.0"
+  },
+  "viewports": [
+    {
+      "viewport": {
+        "name": "phone",
+        "width": 375,
+        "height": 800
+      },
+      "facts": {
+        "title": "Management – FMIST",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+        "allowsZoom": true,
+        "smallTargets": [
+          "a.elementor-icon",
+          "a.elementor-icon",
+          "a.elementor-icon"
+        ],
+        "targetsUnder44": 11,
+        "interactiveCount": 13,
+        "bytes": 4523619,
+        "weight": {
+          "totalBytes": 4523619,
+          "imageBytes": 2101219,
+          "requests": 89,
+          "images": 17,
+          "heavyImages": [
+            {
+              "url": "https://scienceandtech.gov.ng/wp-content/uploads/2026/05/Dr.-Mukhtar-Yawale-Muhammad-MFR-mni-768x794.png",
+              "bytes": 1042584,
+              "width": 374,
+              "height": 387,
+              "shownWidth": 305,
+              "estimateBytes": 96075,
+              "reason": "heavy"
+            },
+            {
+              "url": "https://scienceandtech.gov.ng/wp-content/uploads/2025/12/WhatsApp-Image-2025-10-22-at-07.48.10_ffd39af9.jpg",
+              "bytes": 207829,
+              "width": null,
+              "height": null,
+              "shownWidth": null,
+              "estimateBytes": 0,
+              "reason": "not-shown"
+            },
+            {
+              "url": "https://scienceandtech.gov.ng/wp-content/uploads/2025/12/Untitled-design-13.png",
+              "bytes": 56268,
+              "width": 520,
+              "height": 137,
+              "shownWidth": 160,
+              "estimateBytes": 10240,
+              "reason": "too-large"
+            }
+          ],
+          "heavyCount": 3,
+          "possibleSaving": 1200366
+        }
+      },
+      "findings": [
+        {
+          "id": "aria-required-children",
+          "impact": "critical",
+          "help": "Certain ARIA roles must contain particular children",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=playwright",
+          "wcag": [
+            "1.3.1"
+          ],
+          "nodes": 1,
+          "examples": [
+            ".hfe-search-form__container"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Accordion",
+            "url": "https://omoyolab.github.io/afrigov/components/accordion.html",
+            "advice": "Use native details and summary instead of ARIA widgets."
+          }
+        },
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+          "wcag": [
+            "2.4.4",
+            "4.1.2"
+          ],
+          "nodes": 5,
+          "examples": [
+            ".elementor-element-9f7c243 > .elementor-widget-container > a[target=\"_blank\"]",
+            "picture > .wpr-logo-url[rel=\"home\"][aria-label=\"\"]",
+            ".wpr-logo > .wpr-logo-url[rel=\"home\"][aria-label=\"\"]",
+            ".elementor-element-bdbbd3a > .elementor-widget-container > a[target=\"_blank\"]",
+            ".elementor-element-7f2e5e7 > .elementor-widget-container > a[target=\"_blank\"]"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "Links and buttons need text that says where they go or what they do."
+          }
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "help": "All touch targets must be 24px large, or leave sufficient space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 3,
+          "examples": [
+            ".elementor-social-icon-facebook",
+            ".elementor-social-icon-instagram",
+            ".elementor-social-icon-x-twitter"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Interactive elements are at least 48px tall in afrigov."
+          }
+        },
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        },
+        {
+          "id": "ag-small-targets",
+          "impact": "serious",
+          "help": "Links or controls smaller than 24px at phone width",
+          "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+          "wcag": [
+            "2.5.8"
+          ],
+          "nodes": 3,
+          "examples": [
+            "a.elementor-icon",
+            "a.elementor-icon",
+            "a.elementor-icon"
+          ],
+          "viewports": [
+            "phone"
+          ],
+          "fix": {
+            "component": "Spacing and layout",
+            "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+            "advice": "Make links and controls at least 48px tall at phone width."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-required-children",
+        "aria-required-parent",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "form-field-multiple-labels",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "label",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "target-size"
+      ],
+      "ms": 9977
+    },
+    {
+      "viewport": {
+        "name": "desktop",
+        "width": 1280,
+        "height": 900
+      },
+      "facts": {
+        "title": "Management – FMIST",
+        "lang": "en-US",
+        "hasSkipLink": false,
+        "viewportMeta": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+        "allowsZoom": true,
+        "smallTargets": [],
+        "targetsUnder44": 6,
+        "interactiveCount": 11,
+        "bytes": null
+      },
+      "findings": [
+        {
+          "id": "link-name",
+          "impact": "serious",
+          "help": "Links must have discernible text",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+          "wcag": [
+            "2.4.4",
+            "4.1.2"
+          ],
+          "nodes": 5,
+          "examples": [
+            ".elementor-element-9f7c243 > .elementor-widget-container > a[target=\"_blank\"]",
+            "picture > .wpr-logo-url[rel=\"home\"][aria-label=\"\"]",
+            ".wpr-logo > .wpr-logo-url[rel=\"home\"][aria-label=\"\"]",
+            ".elementor-element-bdbbd3a > .elementor-widget-container > a[target=\"_blank\"]",
+            ".elementor-element-7f2e5e7 > .elementor-widget-container > a[target=\"_blank\"]"
+          ],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Button",
+            "url": "https://omoyolab.github.io/afrigov/components/button.html",
+            "advice": "Links and buttons need text that says where they go or what they do."
+          }
+        },
+        {
+          "id": "ag-no-skip-link",
+          "impact": "moderate",
+          "help": "No skip link to the main content",
+          "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+          "wcag": [
+            "2.4.1"
+          ],
+          "nodes": 1,
+          "examples": [],
+          "viewports": [
+            "desktop"
+          ],
+          "fix": {
+            "component": "Skip link",
+            "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+            "advice": "Add a skip link as the first focusable element."
+          }
+        }
+      ],
+      "passes": [
+        "aria-allowed-attr",
+        "aria-conditional-attr",
+        "aria-deprecated-role",
+        "aria-hidden-body",
+        "aria-hidden-focus",
+        "aria-prohibited-attr",
+        "aria-required-attr",
+        "aria-required-children",
+        "aria-required-parent",
+        "aria-roles",
+        "aria-valid-attr-value",
+        "aria-valid-attr",
+        "avoid-inline-spacing",
+        "bypass",
+        "color-contrast",
+        "document-title",
+        "html-has-lang",
+        "html-lang-valid",
+        "image-alt",
+        "link-name",
+        "list",
+        "listitem",
+        "meta-viewport",
+        "target-size"
+      ],
+      "ms": 8455
+    }
+  ],
+  "findings": [
+    {
+      "id": "aria-required-children",
+      "impact": "critical",
+      "help": "Certain ARIA roles must contain particular children",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-required-children?application=playwright",
+      "wcag": [
+        "1.3.1"
+      ],
+      "nodes": 1,
+      "examples": [
+        ".hfe-search-form__container"
+      ],
+      "viewports": [
+        "phone"
+      ],
+      "fix": {
+        "component": "Accordion",
+        "url": "https://omoyolab.github.io/afrigov/components/accordion.html",
+        "advice": "Use native details and summary instead of ARIA widgets."
+      }
+    },
+    {
+      "id": "link-name",
+      "impact": "serious",
+      "help": "Links must have discernible text",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/link-name?application=playwright",
+      "wcag": [
+        "2.4.4",
+        "4.1.2"
+      ],
+      "nodes": 5,
+      "examples": [
+        ".elementor-element-9f7c243 > .elementor-widget-container > a[target=\"_blank\"]",
+        "picture > .wpr-logo-url[rel=\"home\"][aria-label=\"\"]",
+        ".wpr-logo > .wpr-logo-url[rel=\"home\"][aria-label=\"\"]",
+        ".elementor-element-bdbbd3a > .elementor-widget-container > a[target=\"_blank\"]",
+        ".elementor-element-7f2e5e7 > .elementor-widget-container > a[target=\"_blank\"]"
+      ],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Button",
+        "url": "https://omoyolab.github.io/afrigov/components/button.html",
+        "advice": "Links and buttons need text that says where they go or what they do."
+      }
+    },
+    {
+      "id": "ag-small-targets",
+      "impact": "serious",
+      "help": "Links or controls smaller than 24px at phone width",
+      "helpUrl": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+      "wcag": [
+        "2.5.8"
+      ],
+      "nodes": 3,
+      "examples": [
+        "a.elementor-icon",
+        "a.elementor-icon",
+        "a.elementor-icon"
+      ],
+      "viewports": [
+        "phone"
+      ],
+      "fix": {
+        "component": "Spacing and layout",
+        "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+        "advice": "Make links and controls at least 48px tall at phone width."
+      }
+    },
+    {
+      "id": "target-size",
+      "impact": "serious",
+      "help": "All touch targets must be 24px large, or leave sufficient space",
+      "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+      "wcag": [
+        "2.5.8"
+      ],
+      "nodes": 3,
+      "examples": [
+        ".elementor-social-icon-facebook",
+        ".elementor-social-icon-instagram",
+        ".elementor-social-icon-x-twitter"
+      ],
+      "viewports": [
+        "phone"
+      ],
+      "fix": {
+        "component": "Spacing and layout",
+        "url": "https://omoyolab.github.io/afrigov/styles/spacing-and-layout.html",
+        "advice": "Interactive elements are at least 48px tall in afrigov."
+      }
+    },
+    {
+      "id": "ag-no-skip-link",
+      "impact": "moderate",
+      "help": "No skip link to the main content",
+      "helpUrl": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+      "wcag": [
+        "2.4.1"
+      ],
+      "nodes": 1,
+      "examples": [],
+      "viewports": [
+        "phone",
+        "desktop"
+      ],
+      "fix": {
+        "component": "Skip link",
+        "url": "https://omoyolab.github.io/afrigov/components/skip-link.html",
+        "advice": "Add a skip link as the first focusable element."
+      }
+    }
+  ],
+  "score": 59.5,
+  "grade": "D",
+  "summary": {
+    "critical": 1,
+    "serious": 3,
+    "moderate": 1,
+    "minor": 0
+  }
+}

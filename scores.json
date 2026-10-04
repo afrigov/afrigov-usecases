@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-10-03",
+  "checkedAt": "2026-10-04",
   "tool": "afrigov-audit 0.2.0",
   "usecases": {
     "fmcide": {
@@ -11,7 +11,7 @@
       "real": {
         "score": 52,
         "grade": "D",
-        "checkedAt": "2026-10-03"
+        "checkedAt": "2026-10-04"
       },
       "compare": [
         {
@@ -20,7 +20,7 @@
           "real": {
             "score": 52,
             "grade": "D",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -33,7 +33,7 @@
           "real": {
             "score": 73,
             "grade": "C",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -46,7 +46,7 @@
           "real": {
             "score": 58,
             "grade": "D",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -64,7 +64,7 @@
       "real": {
         "score": 38.5,
         "grade": "F",
-        "checkedAt": "2026-10-03"
+        "checkedAt": "2026-10-04"
       },
       "compare": [
         {
@@ -73,7 +73,7 @@
           "real": {
             "score": 38.5,
             "grade": "F",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -86,7 +86,7 @@
           "real": {
             "score": 68.5,
             "grade": "C",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -99,7 +99,7 @@
           "real": {
             "score": 65.5,
             "grade": "C",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -117,7 +117,7 @@
       "real": {
         "score": 17.5,
         "grade": "F",
-        "checkedAt": "2026-10-03"
+        "checkedAt": "2026-10-04"
       },
       "compare": [
         {
@@ -126,7 +126,7 @@
           "real": {
             "score": 17.5,
             "grade": "F",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -139,7 +139,7 @@
           "real": {
             "score": 98.5,
             "grade": "A",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,
@@ -152,7 +152,60 @@
           "real": {
             "score": 89.5,
             "grade": "B",
-            "checkedAt": "2026-10-03"
+            "checkedAt": "2026-10-04"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        }
+      ]
+    },
+    "fmist": {
+      "pages": 41,
+      "rebuild": {
+        "score": 100,
+        "grade": "A"
+      },
+      "real": {
+        "score": 44.5,
+        "grade": "D",
+        "checkedAt": "2026-10-04"
+      },
+      "compare": [
+        {
+          "label": "Home",
+          "url": "https://scienceandtech.gov.ng/",
+          "real": {
+            "score": 44.5,
+            "grade": "D",
+            "checkedAt": "2026-10-04"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "Management",
+          "url": "https://scienceandtech.gov.ng/management/",
+          "real": {
+            "score": 59.5,
+            "grade": "D",
+            "checkedAt": "2026-10-04"
+          },
+          "rebuild": {
+            "score": 100,
+            "grade": "A"
+          }
+        },
+        {
+          "label": "Contact",
+          "url": "https://scienceandtech.gov.ng/contact/",
+          "real": {
+            "score": 65.5,
+            "grade": "C",
+            "checkedAt": "2026-10-04"
           },
           "rebuild": {
             "score": 100,

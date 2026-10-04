@@ -70,5 +70,29 @@
         "rebuild": "moh-gh/publications/policy-documents.html"
       }
     ]
+  },
+  {
+    "slug": "fmist",
+    "name": "Federal Ministry of Innovation, Science and Technology",
+    "country": "Nigeria",
+    "site": "scienceandtech.gov.ng",
+    "note": "with video pages, events and 13 department pages",
+    "compare": [
+      {
+        "label": "Home",
+        "real": "https://scienceandtech.gov.ng/",
+        "rebuild": "fmist/index.html"
+      },
+      {
+        "label": "Management",
+        "real": "https://scienceandtech.gov.ng/management/",
+        "rebuild": "fmist/management.html"
+      },
+      {
+        "label": "Contact",
+        "real": "https://scienceandtech.gov.ng/contact/",
+        "rebuild": "fmist/contact.html"
+      }
+    ]
   }
 ]
