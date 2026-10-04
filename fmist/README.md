@@ -21,7 +21,7 @@ Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.3.0 on 
 | Contact | 65.5, C | 3.1 MB | The same, and a form that shows as raw code |
 | A news article | 47.5, D | 2.6 MB | The same, and low contrast |
 
-Every rebuilt page scores 100, A, on afrigov 0.12 from the CDN. The rebuilt home page is 33 KB in 7 requests on a phone.
+Every rebuilt page scores 100, A, on afrigov 0.13 from the CDN. The rebuilt home page is 33 KB in 7 requests on a phone.
 
 ## Rules
 

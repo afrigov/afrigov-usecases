@@ -22,7 +22,7 @@ Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.2.0 on 
 
 The real site's inner pages are nearly fine. Its home page is where the slider, the carousel and the widgets are.
 
-Every rebuilt page scores 100, A, on afrigov 0.11 from the CDN.
+Every rebuilt page scores 100, A, on afrigov 0.13 from the CDN.
 
 ## Rules
 

@@ -2,7 +2,7 @@
 import os, html, re, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.12/dist/")
+CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.13/dist/")
 REAL = "https://scienceandtech.gov.ng/"
 UP = REAL + "wp-content/uploads/"
 ORG = "Federal Ministry of Innovation, Science and Technology"
@@ -564,7 +564,7 @@ P["index.html"] = shell(ORG, f'''      <div class="ag-hero ag-hero--primary">
         <div class="ag-container ag-hero__inner">
           <div>
             <h1 class="ag-heading-xl ag-hero__title">Science, technology and innovation for Nigeria</h1>
-            <p class="ag-lead ag-hero__lead">The ministry sets national policy on research and invention, and supervises the 17 agencies that patent, incubate and fund new technology.</p>
+            <p class="ag-lead ag-hero__lead">Our mission is a sustainable, knowledge-based economy for Nigeria, built on research and new technology.</p>
             <div class="ag-button-group ag-hero__actions">
               <a class="ag-button ag-button--start" href="services.html">Find a service</a>
               <a class="ag-button ag-button--secondary" href="programs.html">Our programs</a>
