@@ -560,7 +560,7 @@ P = {}
 
 # ---------------------------------------------------------------- home
 
-P["index.html"] = shell(ORG, f'''      <div class="ag-hero ag-hero--primary">
+P["index.html"] = shell(ORG, f'''      <div class="ag-hero ag-hero--primary ag-hero--tall">
         <div class="ag-container ag-hero__inner">
           <div>
             <h1 class="ag-heading-xl ag-hero__title">Science, technology and innovation for Nigeria</h1>
@@ -568,6 +568,10 @@ P["index.html"] = shell(ORG, f'''      <div class="ag-hero ag-hero--primary">
             <div class="ag-button-group ag-hero__actions">
               <a class="ag-button ag-button--start" href="services.html">Find a service</a>
               <a class="ag-button ag-button--secondary" href="programs.html">Our programs</a>
+            </div>
+            <div class="ag-mt-6">
+              <p>Coming up: <a href="events/technology-innovation-expo.html">Technology and Innovation Expo 2026</a>, third week of October.</p>
+              <p class="ag-mb-0">Read the <a href="{RESOURCES[0][2]}">National Science, Technology and Innovation Policy</a> (PDF, 759 KB).</p>
             </div>
           </div>
         </div>
@@ -577,11 +581,10 @@ P["index.html"] = shell(ORG, f'''      <div class="ag-hero ag-hero--primary">
         <h2 class="ag-visually-hidden">The ministry in numbers</h2>
         <dl class="ag-stats">
           <div class="ag-stats__item"><dt class="ag-stats__label">Founded</dt><dd class="ag-stats__value">1980</dd></div>
-          <div class="ag-stats__item"><dt class="ag-stats__label">Departments</dt><dd class="ag-stats__value">15</dd></div>
-          <div class="ag-stats__item"><dt class="ag-stats__label">Units</dt><dd class="ag-stats__value">3</dd></div>
-          <div class="ag-stats__item"><dt class="ag-stats__label">Agencies</dt><dd class="ag-stats__value">17</dd></div>
+          <div class="ag-stats__item"><dt class="ag-stats__label"><a href="departments.html">Departments</a></dt><dd class="ag-stats__value">15</dd></div>
+          <div class="ag-stats__item"><dt class="ag-stats__label"><a href="departments.html#units">Units</a></dt><dd class="ag-stats__value">3</dd></div>
+          <div class="ag-stats__item"><dt class="ag-stats__label"><a href="agencies.html">Agencies</a></dt><dd class="ag-stats__value">17</dd></div>
         </dl>
-        <p>See the <a href="departments.html">departments and units</a>, the <a href="agencies.html">17 agencies</a>, and the <a href="resources.html">national policies</a>.</p>
 
         <h2>Services</h2>
         <p class="ag-prose">The ministry's agencies deliver these services. Each link goes to the agency that handles it.</p>
@@ -739,7 +742,7 @@ P["departments.html"] = shell("Departments and units", f'''      <div class="ag-
       </div>
 {dept_cards(DEPARTMENT_LIST)}
       <div class="ag-prose">
-        <h2>Units</h2>
+        <h2 id="units">Units</h2>
       </div>
 {dept_cards(UNIT_LIST)}''', current="About", breadcrumb=crumbs(("about.html", "About"), ("departments.html", "Departments and units")))
 
