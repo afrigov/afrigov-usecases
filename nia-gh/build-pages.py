@@ -2,7 +2,7 @@
 import os, html, re, json
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.14.1/dist/")
+CDN = os.environ.get("AFRIGOV_CDN", "https://cdn.jsdelivr.net/npm/afrigov@0.15.0/dist/")
 REAL = "https://nia.gov.gh/"
 ORG = "National Identification Authority"
 ICONS = json.load(open(os.path.join(HERE, "assets", "social-icons.json")))
