@@ -1,6 +1,6 @@
 # afrigov use case: nia.gov.gh rebuilt
 
-An unofficial rebuild of the website of Ghana's National Identification Authority, the agency that issues the Ghana Card, on [afrigov](https://github.com/omoyolab/afrigov). It exists to find out what breaks when the components meet a service site, and to show the same site built accessibly next to the real one's audit score.
+An unofficial rebuild of the website of Ghana's National Identification Authority, the agency that issues the Ghana Card, on [afrigov](https://github.com/afrigov/afrigov). It exists to find out what breaks when the components meet a service site, and to show the same site built accessibly next to the real one's audit score.
 
 It is not the authority's website and says so on every page.
 
@@ -12,7 +12,7 @@ It is also a different country and a different look. It uses the Ghana pack with
 
 ## Baseline
 
-Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.2.0 on 2 October 2026. The full results are in `baseline/`.
+Scores from [afrigov-audit](https://github.com/afrigov/afrigov-audit) 0.2.0 on 2 October 2026. The full results are in `baseline/`.
 
 | Real page | Score | Biggest problems |
 | --- | ---: | --- |

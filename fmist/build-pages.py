@@ -467,7 +467,7 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False, index
         </div>
         <div class="ag-footer__bar">
           <span class="ag-flag" aria-hidden="true"><span></span><span></span><span></span></span>
-          <p>Unofficial rebuild of <a href="{REAL}">scienceandtech.gov.ng</a> on <a href="https://github.com/omoyolab/afrigov">afrigov</a>, for demonstration. The ministry and its agencies own their content.</p>
+          <p>Unofficial rebuild of <a href="{REAL}">scienceandtech.gov.ng</a> on <a href="https://github.com/afrigov/afrigov">afrigov</a>, for demonstration. The ministry and its agencies own their content.</p>
         </div>
       </div>
     </footer>

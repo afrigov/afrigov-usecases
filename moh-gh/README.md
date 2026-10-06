@@ -1,6 +1,6 @@
 # afrigov use case: moh.gov.gh rebuilt
 
-An unofficial rebuild of the website of Ghana's Ministry of Health on [afrigov](https://github.com/omoyolab/afrigov). It is the third use case, and the first to use the section menus and the panel hero that afrigov 0.10 added for it.
+An unofficial rebuild of the website of Ghana's Ministry of Health on [afrigov](https://github.com/afrigov/afrigov). It is the third use case, and the first to use the section menus and the panel hero that afrigov 0.10 added for it.
 
 It is not the ministry's website and says so on every page.
 
@@ -12,7 +12,7 @@ The real site keeps its 37 pages behind six dropdown menus and opens with a phot
 
 ## Baseline
 
-Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.2.0 on 3 October 2026. The full results are in `baseline/`.
+Scores from [afrigov-audit](https://github.com/afrigov/afrigov-audit) 0.2.0 on 3 October 2026. The full results are in `baseline/`.
 
 | Real page | Score | Biggest problems |
 | --- | ---: | --- |

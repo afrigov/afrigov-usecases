@@ -168,7 +168,7 @@ def shell(title, main, current=None, root="", breadcrumb=None, wide=False):
         </div>
         <div class="ag-footer__bar">
           <span class="ag-flag" aria-hidden="true"><span></span><span></span><span></span></span>
-          <p>Unofficial rebuild of <a href="{REAL}">nia.gov.gh</a> on <a href="https://github.com/omoyolab/afrigov">afrigov</a>, for demonstration. The authority owns its content and marks.</p>
+          <p>Unofficial rebuild of <a href="{REAL}">nia.gov.gh</a> on <a href="https://github.com/afrigov/afrigov">afrigov</a>, for demonstration. The authority owns its content and marks.</p>
         </div>
       </div>
     </footer>

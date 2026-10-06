@@ -1,6 +1,6 @@
 # afrigov use case: scienceandtech.gov.ng rebuilt
 
-An unofficial rebuild of the website of Nigeria's Federal Ministry of Innovation, Science and Technology on [afrigov](https://github.com/omoyolab/afrigov). It is the fourth use case, and the first to use the video components and the people grid on a Nigerian site.
+An unofficial rebuild of the website of Nigeria's Federal Ministry of Innovation, Science and Technology on [afrigov](https://github.com/afrigov/afrigov). It is the fourth use case, and the first to use the video components and the people grid on a Nigerian site.
 
 It is not the ministry's website and says so on every page.
 
@@ -12,7 +12,7 @@ The real site is built with WordPress and Elementor. It opens with a slider, hol
 
 ## Baseline
 
-Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.3.0 on 3 October 2026. The full results are in `baseline/`.
+Scores from [afrigov-audit](https://github.com/afrigov/afrigov-audit) 0.3.0 on 3 October 2026. The full results are in `baseline/`.
 
 | Real page | Score | Weight on a phone | Biggest problems |
 | --- | ---: | ---: | --- |

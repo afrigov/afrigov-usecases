@@ -1,6 +1,6 @@
 # afrigov use cases
 
-Real government websites rebuilt page for page on [afrigov](https://github.com/omoyolab/afrigov), to find out what breaks when the components meet real content, and to show the same site built accessibly next to the real one's audit score.
+Real government websites rebuilt page for page on [afrigov](https://github.com/afrigov/afrigov), to find out what breaks when the components meet real content, and to show the same site built accessibly next to the real one's audit score.
 
 Live: https://usecases.afrigov.dev/
 
@@ -11,7 +11,7 @@ Live: https://usecases.afrigov.dev/
 | [moh.gov.gh](moh-gh/), Ghana | ![Rebuild score](https://usecases.afrigov.dev/badges/moh-gh-rebuild.svg) | ![Real site score](https://usecases.afrigov.dev/badges/moh-gh-real.svg) |
 | [scienceandtech.gov.ng](fmist/), Nigeria | ![Rebuild score](https://usecases.afrigov.dev/badges/fmist-rebuild.svg) | ![Real site score](https://usecases.afrigov.dev/badges/fmist-real.svg) |
 
-The badges come from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) and update automatically every week. See [How the scores stay current](#how-the-scores-stay-current).
+The badges come from [afrigov-audit](https://github.com/afrigov/afrigov-audit) and update automatically every week. See [How the scores stay current](#how-the-scores-stay-current).
 
 ## What these are, and are not
 

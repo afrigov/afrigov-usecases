@@ -1,12 +1,12 @@
 # afrigov use case: fmcide.gov.ng rebuilt
 
-An unofficial rebuild of the website of Nigeria's Federal Ministry of Communications, Innovation and Digital Economy, page for page, on [afrigov](https://github.com/omoyolab/afrigov). It exists to find out what breaks when the components meet a real government site's content, and to show the same site built accessibly next to the real one's audit score.
+An unofficial rebuild of the website of Nigeria's Federal Ministry of Communications, Innovation and Digital Economy, page for page, on [afrigov](https://github.com/afrigov/afrigov). It exists to find out what breaks when the components meet a real government site's content, and to show the same site built accessibly next to the real one's audit score.
 
 It is not the ministry's website and says so on every page.
 
 ## Baseline
 
-Scores from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) 0.1.1 on 2026-10-02.
+Scores from [afrigov-audit](https://github.com/afrigov/afrigov-audit) 0.1.1 on 2026-10-02.
 
 | Real page | Score | Biggest problem |
 | --- | ---: | --- |
