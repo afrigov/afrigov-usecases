@@ -535,7 +535,7 @@ def events_html(rows, root=""):
           {block}
           <div class="ag-event__body">
             <h3 class="ag-event__title"><a href="{href}">{title}</a></h3>
-            <p class="ag-event__meta">{meta}{" Past event." if past else ""}</p>{line}
+            <p class="ag-event__meta">{meta}{". Past event." if past else ""}</p>{line}
           </div>
         </li>'''
     return f'      <ul class="ag-events">{out}\n      </ul>'
