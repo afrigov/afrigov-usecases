@@ -2,14 +2,14 @@
 
 Real government websites rebuilt page for page on [afrigov](https://github.com/omoyolab/afrigov), to find out what breaks when the components meet real content, and to show the same site built accessibly next to the real one's audit score.
 
-Live: https://omoyolab.github.io/afrigov-usecases/
+Live: https://usecases.afrigov.dev/
 
 | Use case | Rebuild | Real site, home page |
 | --- | --- | --- |
-| [fmcide.gov.ng](fmcide/), Nigeria | ![Rebuild score](https://omoyolab.github.io/afrigov-usecases/badges/fmcide-rebuild.svg) | ![Real site score](https://omoyolab.github.io/afrigov-usecases/badges/fmcide-real.svg) |
-| [nia.gov.gh](nia-gh/), Ghana | ![Rebuild score](https://omoyolab.github.io/afrigov-usecases/badges/nia-gh-rebuild.svg) | ![Real site score](https://omoyolab.github.io/afrigov-usecases/badges/nia-gh-real.svg) |
-| [moh.gov.gh](moh-gh/), Ghana | ![Rebuild score](https://omoyolab.github.io/afrigov-usecases/badges/moh-gh-rebuild.svg) | ![Real site score](https://omoyolab.github.io/afrigov-usecases/badges/moh-gh-real.svg) |
-| [scienceandtech.gov.ng](fmist/), Nigeria | ![Rebuild score](https://omoyolab.github.io/afrigov-usecases/badges/fmist-rebuild.svg) | ![Real site score](https://omoyolab.github.io/afrigov-usecases/badges/fmist-real.svg) |
+| [fmcide.gov.ng](fmcide/), Nigeria | ![Rebuild score](https://usecases.afrigov.dev/badges/fmcide-rebuild.svg) | ![Real site score](https://usecases.afrigov.dev/badges/fmcide-real.svg) |
+| [nia.gov.gh](nia-gh/), Ghana | ![Rebuild score](https://usecases.afrigov.dev/badges/nia-gh-rebuild.svg) | ![Real site score](https://usecases.afrigov.dev/badges/nia-gh-real.svg) |
+| [moh.gov.gh](moh-gh/), Ghana | ![Rebuild score](https://usecases.afrigov.dev/badges/moh-gh-rebuild.svg) | ![Real site score](https://usecases.afrigov.dev/badges/moh-gh-real.svg) |
+| [scienceandtech.gov.ng](fmist/), Nigeria | ![Rebuild score](https://usecases.afrigov.dev/badges/fmist-rebuild.svg) | ![Real site score](https://usecases.afrigov.dev/badges/fmist-real.svg) |
 
 The badges come from [afrigov-audit](https://github.com/omoyolab/afrigov-audit) and update automatically every week. See [How the scores stay current](#how-the-scores-stay-current).
 
