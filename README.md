@@ -45,3 +45,7 @@ npm run build:offline    # rebuild the index from scores.json without auditing
 ## Adding a use case
 
 Add a folder with the rebuilt pages and an entry in `usecases.json` naming the real pages to compare. The build does the rest: the card, the badges and the scores table. Add the badge row to this README.
+
+## How it is made
+
+Built with AI assistance (Claude). Every change is reviewed and decided by the maintainer before it ships.
